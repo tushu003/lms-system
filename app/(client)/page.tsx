@@ -1,12 +1,12 @@
 import Banner from "@/app/(client)/_components/Banner";
 import Image from "next/image";
-import FeatureCard from "@/components/feature/FeatureCard";
+import FeatureCard from "@/app/(client)/_components/FeatureCard";
 import Courses from "./courses/page";
-import CoursesCard from "@/components/courses/CoursesCard";
-import LearnAnywhere from "@/components/LearnAnyWhere";
-import TeachEvolve from "@/components/TeachEvolve";
-import Testimonials from "@/components/Testimonials";
-import SuccessStory from "@/components/SuccessStory";
+import CoursesCard from "@/app/(client)/_components/CoursesCard";
+import LearnAnywhere from "@/app/(client)/_components/LearnAnyWhere";
+import TeachEvolve from "@/app/(client)/_components/TeachEvolve";
+import Testimonials from "@/app/(client)/_components/Testimonials";
+import SuccessStory from "@/app/(client)/_components/SuccessStory";
 
 export default function Home() {
   return (

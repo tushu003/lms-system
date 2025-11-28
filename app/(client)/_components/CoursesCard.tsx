@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { courses } from "../../features/student/mock/courses";
+import { courses } from "../../../features/student/mock/courses";
 
 const Badge: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <span className="inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-l from-[#CFFAFE] to-[#DBEAFE] text-[#1E40AF] text-xs font-medium">
