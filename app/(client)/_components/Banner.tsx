@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import bannerImage from '@/pu'
+import bannerImage from '@/public/assets/hero/banner.png'
 
 export default function Banner() {
   return (

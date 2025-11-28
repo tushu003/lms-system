@@ -1,8 +1,8 @@
 import React from "react";
-import teach1 from "../../public/assets/icons/teach1.png";
-import teach2 from "../../public/assets/icons/teach2.png";
-import teach3 from "../../public/assets/icons/teach3.png";
-import teach4 from "../../public/assets/icons/teach4.png";
+import teach1 from "@/public/assets/icons/teach1.png";
+import teach2 from "@/public/assets/icons/teach2.png";
+import teach3 from "@/public/assets/icons/teach3.png";
+import teach4 from "@/public/assets/icons/teach4.png";
 import Image from "next/image";
 
 export default function TeachEvolve() {
@@ -77,4 +77,4 @@ export default function TeachEvolve() {
       </div>
     </section>
   );
-}
+};
