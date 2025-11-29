@@ -36,12 +36,18 @@ export default function PublicFooter(): JSX.Element {
           <div className="md:col-span-4">
             <div className="flex items-start gap-3">
               <div className="w-28 h-10 relative">
-                <Image src={logoWhite} alt="Evolve Logo" width={96} height={65} />
+                <Image
+                  src={logoWhite}
+                  alt="Evolve Logo"
+                  width={96}
+                  height={65}
+                />
               </div>
             </div>
 
             <p className="mt-4 text-slate-400 text-sm leading-relaxed max-w-[300px]">
-              Empowering students to reach their full potential through personalized tutoring and innovative learning solutions.
+              Empowering students to reach their full potential through
+              personalized tutoring and innovative learning solutions.
             </p>
             <div className="mt-4 flex items-center gap-4">
               <Image src={instaIcon} alt="insta" width={20} height={20} />
@@ -50,16 +56,23 @@ export default function PublicFooter(): JSX.Element {
           </div>
 
           <div className="md:col-span-4">
-            <h3 className="text-white text-sm font-semibold mb-3">Our Commitment to you</h3>
+            <h3 className="text-white text-sm font-semibold mb-3">
+              Our Commitment to you
+            </h3>
             <p className="text-slate-400 text-sm leading-relaxed">
-              We believe in a few things: you, us, and every product we make. If at any time within 30
-              days after your purchase, for any reason, you're not happy—we'll refund your money
-              (minus shipping costs). See full details on the policy page.
+              We believe in a few things: you, us, and every <br /> product we make. If
+              at any time within 30 days <br /> after your purchase, for any reason,
+              you’re not <br /> happy—we’ll refund your money + 10% (minus shipping
+              costs). See full details here. *Purchasing <br /> gift cards or digital
+              items does not count toward <br /> the $100 for Free Shipping or other
+              promotions.
             </p>
           </div>
 
           <div className="md:col-span-2">
-            <h4 className="text-white text-sm font-semibold mb-3">Quick Links</h4>
+            <h4 className="text-white text-sm font-semibold mb-3">
+              Quick Links
+            </h4>
             <ul className="space-y-2 text-sm">
               {quickLinks.map((l) => (
                 <li key={l.href}>
