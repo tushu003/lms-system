@@ -11,7 +11,6 @@ const Badge: React.FC<{ children: React.ReactNode }> = ({ children }) => (
 const CoursesCard: React.FC<{ course: typeof courses[number] }> = ({ course }) => {
   return (
     <article className="bg-white max-w-5xl pb-6 mx-auto rounded-xl shadow-sm overflow-hidden ring-1 ring-gray-100">
-      {/* Top image: fills the card width and has a fixed height */}
       <div className="relative w-full ">
         <Image
           src={course.image}
@@ -24,7 +23,7 @@ const CoursesCard: React.FC<{ course: typeof courses[number] }> = ({ course }) =
         />
       </div>
 
-      {/* Text block below the image */}
+    
       <div className="p-5">
         <h3 className="text-[20px] font-[700] text-[#1E293B]">
           {course.title}
