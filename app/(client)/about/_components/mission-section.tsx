@@ -13,14 +13,14 @@ export default function MissionSection(): JSX.Element {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Left content */}
           <div className="lg:col-span-7">
-            <span className="inline-block bg-indigo-50 text-indigo-600 rounded-full px-3 py-1 text-sm font-medium mb-6">
+            <span className="inline-block bg-indigo-50 text-indigo-600 rounded-full px-2 py-1 text-sm font-medium mb-6">
               Our Mission
             </span>
 
-            <h2 className="text-4xl sm:text-5xl font-extrabold text-slate-900 leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
               Unlocking Every
               <br />
-              <span className="block bg-gradient-to-r from-[#6D28D9] via-[#8B5CF6] to-[#7C3AED] bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-[#4F46E5] to-[#9333EA] bg-clip-text text-transparent">
                 Student's Potential
               </span>
             </h2>
