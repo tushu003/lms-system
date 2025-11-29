@@ -11,12 +11,17 @@ export default function OurValues() {
       <div className=" py-10 rounded-t-lg">
         {/* Heading */}
         <div className="text-center mb-6">
-          <h2 className="text-[#1E293B] text-xl md:text-2xl font-semibold">
-            Why Teach with Evolve?
+            <span className="inline-block bg-indigo-50 text-indigo-600 rounded-full px-2 py-1 text-sm font-medium mb-2">
+              Our Mission
+            </span>
+          <h2 className="text-[#1E293B] text-3xl md:text-4xl font-bold">
+            The Principles That 
+             <span className="block bg-gradient-to-r from-[#9333EA] to-[#DB2777] bg-clip-text text-transparent">
+                 Guide Everything We Do
+              </span>
           </h2>
           <p className="mt-1 text-sm text-[#4B5563] max-w-2xl mx-auto">
-            We are committed to providing exceptional educational experiences
-            that drive real <br /> results
+            Above all, we believe our actions show our true values.
           </p>
         </div>
 
@@ -77,4 +82,4 @@ export default function OurValues() {
       </div>
     </section>
   );
-};
+}
