@@ -8,7 +8,7 @@ import missionImage from '@/public/assets/hero/missonHero.png';
 
 export default function MissionSection(): JSX.Element {
   return (
-    <section className="py-12 bg-white">
+    <section className="py-12 bg-gradient-to-r from-[#F8FAFC] to-[#EFF6FF]">
       <div className="max-w-5xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Left content */}
