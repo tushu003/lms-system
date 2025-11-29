@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import type { JSX } from "react";
 import logoWhite from "@/public/assets/logo/logo.png";
+import instaIcon from "@/public/assets/icons/Instagram (1).png";
+import twitterIcon from "@/public/assets/icons/image 1.png";
 
 type LinkItem = { label: string; href: string };
 
@@ -29,19 +31,22 @@ export default function PublicFooter(): JSX.Element {
     <footer className="bg-[#0f1724] text-slate-300">
       <div className="h-2" />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12">
+      <div className="max-w-6xl mx-auto px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           <div className="md:col-span-4">
             <div className="flex items-start gap-3">
               <div className="w-28 h-10 relative">
-                <Image src={logoWhite} alt="Evolve Logo" width={86} height={65} />
+                <Image src={logoWhite} alt="Evolve Logo" width={96} height={65} />
               </div>
             </div>
 
             <p className="mt-4 text-slate-400 text-sm leading-relaxed max-w-[300px]">
-              Empowering students to reach their full potential through personalized tutoring and
-              innovative learning solutions.
+              Empowering students to reach their full potential through personalized tutoring and innovative learning solutions.
             </p>
+            <div className="mt-4 flex items-center gap-4">
+              <Image src={instaIcon} alt="insta" width={20} height={20} />
+              <Image src={twitterIcon} alt="insta" width={20} height={20} />
+            </div>
           </div>
 
           <div className="md:col-span-4">
