@@ -1,49 +1,95 @@
-import Image from "next/image";
-import React from "react";
-import logo from "../../../public/assets/logo/logo.png";
-import insta from "../../../public/assets/icons/Instagram (1).png";
-import twitter from "../../../public/assets/icons/image 1.png";
+"use client";
 
-export default function PublicFooter() {
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import type { JSX } from "react";
+import logoWhite from "@/public/assets/logo/logo.png";
+
+type LinkItem = { label: string; href: string };
+
+export default function PublicFooter(): JSX.Element {
+  const quickLinks: LinkItem[] = [
+    { label: "About Us", href: "/about" },
+    { label: "Find Tutors", href: "/tutors" },
+    { label: "Contact", href: "/contact" },
+    { label: "Book Session", href: "/book" },
+  ];
+
+  const supportLinks: LinkItem[] = [
+    { label: "Help Center", href: "/help" },
+    { label: "Privacy Policy", href: "/privacy" },
+    { label: "Terms of Service", href: "/terms" },
+    { label: "FAQ", href: "/faq" },
+  ];
+
+  const year = new Date().getFullYear();
+
   return (
-    <div>
-      <footer className="footer sm:footer-horizontal bg-[#1E293B] text-base-content p-10">
-        <aside>
-          <Image src={logo} alt="Evolve Tutoring" width={99} height={43} />
-          <p className="text-[#D1D5DB]">
-            Empowering students to reach their full potential <br /> through
-            personalized tutoring and innovative <br /> learning solutions.
-          </p>
-          <div className="flex gap-4 mt-4">
-            <Image src={insta} alt="insta" width={24} height={24} />
-            <Image src={twitter} alt="twitter" width={24} height={24} />
+    <footer className="bg-[#0f1724] text-slate-300">
+      {/* Top colorful bar */}
+      <div className="h-2" />
+
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+          {/* Logo & description */}
+          <div className="md:col-span-4">
+            <div className="flex items-start gap-3">
+              <div className="w-28 h-10 relative">
+                {/* Put your logo at /public/images/logo-white.png */}
+                <Image src={logoWhite} alt="Evolve Logo" width={86} height={65} />
+              </div>
+            </div>
+
+            <p className="mt-4 text-slate-400 text-sm leading-relaxed max-w-[300px]">
+              Empowering students to reach their full potential through personalized tutoring and
+              innovative learning solutions.
+            </p>
           </div>
-        </aside>
-        <nav>
-          <h6 className="footer-title text-white">Our Commitment to you</h6>
-          <a className="link link-hover text-[#D1D5DB]">
-            We believe in a few things: you, us, and every<br /> product we make. If
-            at any time within 30 days <br /> after your purchase, for any reason,
-            you’re not <br /> happy—we’ll refund your money + 10% <br /> (minus shipping
-            costs). See full details here. <br /> *Purchasing gift cards or digital
-            items does not <br /> count toward the $100 for Free Shipping or other <br />
-            promotions.
-          </a>
-        </nav>
-        <nav>
-          <h6 className="footer-title text-white">Quick Links</h6>
-          <a className="link link-hover text-[#D1D5DB]">About us</a>
-          <a className="link link-hover text-[#D1D5DB]">Find Tutors</a>
-          <a className="link link-hover text-[#D1D5DB]">Contact</a>
-          <a className="link link-hover text-[#D1D5DB]">Book Session</a>
-        </nav>
-        <nav>
-          <h6 className="footer-title text-white">Help Center</h6>
-          <a className="link link-hover text-[#D1D5DB] ">Terms of use</a>
-          <a className="link link-hover text-[#D1D5DB]">Privacy policy</a>
-          <a className="link link-hover text-[#D1D5DB]">FAQ</a>
-        </nav>
-      </footer>
-    </div>
+
+          {/* Commitment */}
+          <div className="md:col-span-4">
+            <h3 className="text-white text-sm font-semibold mb-3">Our Commitment to you</h3>
+            <p className="text-slate-400 text-sm leading-relaxed">
+              We believe in a few things: you, us, and every product we make. If at any time within 30
+              days after your purchase, for any reason, you're not happy—we'll refund your money
+              (minus shipping costs). See full details on the policy page.
+            </p>
+          </div>
+
+          {/* Quick Links */}
+          <div className="md:col-span-2">
+            <h4 className="text-white text-sm font-semibold mb-3">Quick Links</h4>
+            <ul className="space-y-2 text-sm">
+              {quickLinks.map((l) => (
+                <li key={l.href}>
+                  <a href={l.href} className="hover:text-white">
+                    {l.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Support */}
+          <div className="md:col-span-2">
+            <h4 className="text-white text-sm font-semibold mb-3">Support</h4>
+            <ul className="space-y-2 text-sm">
+              {supportLinks.map((l) => (
+                <li key={l.href}>
+                  <a href={l.href} className="hover:text-white">
+                    {l.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div className="mt-8 border-t border-slate-800 pt-6 text-center text-slate-500 text-sm">
+          © {year} Evolve Tutoring LLC. All rights reserved.
+        </div>
+      </div>
+    </footer>
   );
 }
