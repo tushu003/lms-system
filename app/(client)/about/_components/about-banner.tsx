@@ -2,7 +2,7 @@ import React from "react";
 
 export default function AboutBanner() {
   return (
-    <div className="bg-gradient-to-br from-[#312E81] via-[#581C87] to-[#831843] py-20">
+    <div className="bg-gradient-to-br from-[#312E81] via-[#581C87] to-[#831843] py-12">
       <div className="max-w-3xl mx-auto px-4 text-center">
         <span className="inline-flex items-center justify-center px-3 py-1 rounded-full text-sm bg-white/10 text-white mb-4">
           Our Story
@@ -17,8 +17,8 @@ export default function AboutBanner() {
         </h2>
 
         <p className="text-white/90 my-4">
-          Since 2019, we've been on a mission to make quality education
-          accessible, <br />
+          Since 2019, we have been on a mission to make quality education
+          accessible, <br />personalized and Effective
         </p>
       </div>
     </div>
