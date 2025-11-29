@@ -11,14 +11,14 @@ export default function OurValues() {
       <div className=" py-10 bg-gradient-to-r from-[#F8FAFC] to-[#EFF6FF] rounded-t-lg">
         {/* Heading */}
         <div className="text-center mb-6">
-            <span className="inline-block bg-indigo-50 text-indigo-600 rounded-full px-2 py-1 text-sm font-medium mb-2">
-              Our Mission
-            </span>
+          <span className="inline-block bg-indigo-50 text-indigo-600 rounded-full px-2 py-1 text-sm font-medium mb-2">
+            Our Mission
+          </span>
           <h2 className="text-[#1E293B] text-3xl md:text-4xl font-bold">
-            The Principles That 
-             <span className="block bg-gradient-to-r from-[#9333EA] to-[#DB2777] bg-clip-text text-transparent">
-                 Guide Everything We Do
-              </span>
+            The Principles That
+            <span className="block bg-gradient-to-r from-[#9333EA] to-[#DB2777] bg-clip-text text-transparent">
+              Guide Everything We Do
+            </span>
           </h2>
           <p className="mt-1 text-sm text-[#4B5563] max-w-2xl mx-auto">
             Above all, we believe our actions show our true values.
@@ -28,54 +28,55 @@ export default function OurValues() {
         {/* Cards */}
         <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
           {/* Card 1 */}
-          <article className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 flex flex-col items-center gap-2">
+          <article className="bg-white backdrop-blur-sm rounded-2xl p-6 flex flex-col items-center gap-2">
             <div className="w-12 h-12 bg-gradient-to-r from-[#6366F1] to-[#A855F7] text-white rounded-md flex items-center justify-center text-xl">
               <Image src={accoutibility} alt="icons" width={20} height={20} />
             </div>
             <h3 className="text-sm font-semibold text-[#1E293B]">
-              Expert Tutors
+              Accountability
             </h3>
             <p className="text-xs text-[#4B5563] text-center">
-              Qualified educators with proven track records in their subjects
+              We strive for the highest <br /> standards in everything we <br />{" "}
+              do
             </p>
           </article>
 
           {/* Card 2 */}
-          <article className=" backdrop-blur-sm rounded-2xl p-6 flex flex-col items-center gap-2">
+          <article className="bg-[#FFFFFF] backdrop-blur-sm rounded-2xl p-6 flex flex-col items-center gap-2">
             <div className="w-12 h-12 bg-gradient-to-r from-[#EC4899] to-[#F43F5E] text-white rounded-md flex items-center justify-center text-xl">
               <Image src={heart} alt="icons" width={20} height={20} />
             </div>
-            <h3 className="text-sm font-semibold text-[#1E293B]">
-              Personalized Learning
-            </h3>
+            <h3 className="text-sm font-semibold text-[#1E293B]">Kindness</h3>
             <p className="text-xs text-[#4B5563] text-center">
-              Customized lesson plans tailored to each students unique needs
+              We care deeply about each <br /> student's journey and <br />{" "}
+              success
             </p>
           </article>
 
           {/* Card 3 */}
-          <article className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 flex flex-col items-center gap-2">
+          <article className="bg-white backdrop-blur-sm rounded-2xl p-6 flex flex-col items-center gap-2">
             <div className="w-12 h-12 bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] text-white rounded-md flex items-center justify-center text-xl">
               <Image src={teach1} alt="icons" width={20} height={20} />
             </div>
             <h3 className="text-sm font-semibold text-[#1E293B]">
-              Flexible Scheduling
+              Perserverance
             </h3>
             <p className="text-xs text-[#4B5563] text-center">
-              Book sessions that fit your schedule, online or in-person
+              Building connections <br /> between students, tutors, <br /> and
+              families
             </p>
           </article>
 
           {/* Card 4 */}
-          <article className=" backdrop-blur-sm rounded-2xl p-6 flex flex-col items-center gap-2">
+          <article className="bg-[#FFFFFF] backdrop-blur-sm rounded-2xl p-6 flex flex-col items-center gap-2">
             <div className="w-12 h-12 bg-gradient-to-r from-[#22C55E] to-[#10B981] text-white rounded-md flex items-center justify-center text-xl">
               <Image src={teach2} alt="icons" width={20} height={20} />
             </div>
             <h3 className="text-sm font-semibold text-[#1E293B]">
-              Proven Results
+              Patience
             </h3>
             <p className="text-xs text-[#4B5563] text-center">
-              Track record of improved grades and student confidence
+              Continuously evolving our <br /> methods to enhance <br /> learning
             </p>
           </article>
         </div>
