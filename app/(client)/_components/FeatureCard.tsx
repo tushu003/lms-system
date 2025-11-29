@@ -11,7 +11,6 @@ const Badge: React.FC<{ children: React.ReactNode }> = ({ children }) => (
 const FeatureCard: React.FC<{ feature: Feature }> = ({ feature }) => {
   return (
     <article className="bg-white max-w-5xl mx-auto rounded-xl shadow-sm overflow-hidden ring-1 ring-gray-100">
-      {/* Top image: fills the card width and has a fixed height */}
       <div className="relative w-full h-44 md:h-48 lg:h-56 bg-gray-100">
         <Image
           src={feature.image}
@@ -22,7 +21,6 @@ const FeatureCard: React.FC<{ feature: Feature }> = ({ feature }) => {
         />
       </div>
 
-      {/* Text block below the image */}
       <div className="p-5">
         <h3 className="text-[24px] font-[700] text-[#1E293B]">
           {feature.title}
