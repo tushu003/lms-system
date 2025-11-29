@@ -8,7 +8,7 @@ import Image from "next/image";
 export default function OurValues() {
   return (
     <section className="w-full">
-      <div className=" py-10 rounded-t-lg">
+      <div className=" py-10 bg-gradient-to-r from-[#F8FAFC] to-[#EFF6FF] rounded-t-lg">
         {/* Heading */}
         <div className="text-center mb-6">
             <span className="inline-block bg-indigo-50 text-indigo-600 rounded-full px-2 py-1 text-sm font-medium mb-2">
