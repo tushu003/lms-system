@@ -27,16 +27,13 @@ export default function PublicFooter(): JSX.Element {
 
   return (
     <footer className="bg-[#0f1724] text-slate-300">
-      {/* Top colorful bar */}
       <div className="h-2" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-          {/* Logo & description */}
           <div className="md:col-span-4">
             <div className="flex items-start gap-3">
               <div className="w-28 h-10 relative">
-                {/* Put your logo at /public/images/logo-white.png */}
                 <Image src={logoWhite} alt="Evolve Logo" width={86} height={65} />
               </div>
             </div>
@@ -47,7 +44,6 @@ export default function PublicFooter(): JSX.Element {
             </p>
           </div>
 
-          {/* Commitment */}
           <div className="md:col-span-4">
             <h3 className="text-white text-sm font-semibold mb-3">Our Commitment to you</h3>
             <p className="text-slate-400 text-sm leading-relaxed">
@@ -57,7 +53,6 @@ export default function PublicFooter(): JSX.Element {
             </p>
           </div>
 
-          {/* Quick Links */}
           <div className="md:col-span-2">
             <h4 className="text-white text-sm font-semibold mb-3">Quick Links</h4>
             <ul className="space-y-2 text-sm">
