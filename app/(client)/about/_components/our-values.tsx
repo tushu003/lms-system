@@ -1,8 +1,8 @@
 import React from "react";
 import teach1 from "@/public/assets/icons/teach1.png";
 import teach2 from "@/public/assets/icons/teach2.png";
-import teach3 from "@/public/assets/icons/teach3.png";
-import teach4 from "@/public/assets/icons/teach4.png";
+import accoutibility from "@/public/assets/icons/SVG (5).png";
+import heart from "@/public/assets/icons/SVG (6).png";
 import Image from "next/image";
 
 export default function OurValues() {
@@ -25,7 +25,7 @@ export default function OurValues() {
           {/* Card 1 */}
           <article className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 flex flex-col items-center gap-2">
             <div className="w-12 h-12 bg-gradient-to-r from-[#6366F1] to-[#A855F7] text-white rounded-md flex items-center justify-center text-xl">
-              <Image src={teach1} alt="icons" width={20} height={20} />
+              <Image src={accoutibility} alt="icons" width={20} height={20} />
             </div>
             <h3 className="text-sm font-semibold text-[#1E293B]">
               Expert Tutors
@@ -37,8 +37,8 @@ export default function OurValues() {
 
           {/* Card 2 */}
           <article className=" backdrop-blur-sm rounded-2xl p-6 flex flex-col items-center gap-2">
-            <div className="w-12 h-12 bg-gradient-to-r from-[#22C55E] to-[#10B981] text-white rounded-md flex items-center justify-center text-xl">
-              <Image src={teach2} alt="icons" width={20} height={20} />
+            <div className="w-12 h-12 bg-gradient-to-r from-[#EC4899] to-[#F43F5E] text-white rounded-md flex items-center justify-center text-xl">
+              <Image src={heart} alt="icons" width={20} height={20} />
             </div>
             <h3 className="text-sm font-semibold text-[#1E293B]">
               Personalized Learning
@@ -50,8 +50,8 @@ export default function OurValues() {
 
           {/* Card 3 */}
           <article className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 flex flex-col items-center gap-2">
-            <div className="w-12 h-12 bg-gradient-to-r from-[#EC4899] to-[#F43F5E] text-white rounded-md flex items-center justify-center text-xl">
-              <Image src={teach3} alt="icons" width={20} height={20} />
+            <div className="w-12 h-12 bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] text-white rounded-md flex items-center justify-center text-xl">
+              <Image src={teach1} alt="icons" width={20} height={20} />
             </div>
             <h3 className="text-sm font-semibold text-[#1E293B]">
               Flexible Scheduling
@@ -63,8 +63,8 @@ export default function OurValues() {
 
           {/* Card 4 */}
           <article className=" backdrop-blur-sm rounded-2xl p-6 flex flex-col items-center gap-2">
-            <div className="w-12 h-12 bg-gradient-to-r from-[#A855F7] to-[#8B5CF6] text-white rounded-md flex items-center justify-center text-xl">
-              <Image src={teach4} alt="icons" width={20} height={20} />
+            <div className="w-12 h-12 bg-gradient-to-r from-[#22C55E] to-[#10B981] text-white rounded-md flex items-center justify-center text-xl">
+              <Image src={teach2} alt="icons" width={20} height={20} />
             </div>
             <h3 className="text-sm font-semibold text-[#1E293B]">
               Proven Results
