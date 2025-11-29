@@ -11,8 +11,8 @@ export type Course = {
   title: string;
   subtitle?: string;
   description: string;
-  image: string | StaticImageData; // path under /public/images or remote url
-  accent?: string; // optional accent color (Tailwind class)
+  image: string | StaticImageData; 
+  accent?: string; 
 };
 
 export const courses: Course[] = [
