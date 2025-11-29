@@ -8,8 +8,8 @@ import missionImage from '@/public/assets/hero/missonHero.png';
 
 export default function MissionSection(): JSX.Element {
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section className="py-12 bg-white">
+      <div className="max-w-5xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Left content */}
           <div className="lg:col-span-7">
@@ -57,23 +57,15 @@ export default function MissionSection(): JSX.Element {
           {/* Right image */}
           <div className="lg:col-span-5">
             <div className="relative w-full h-64 sm:h-72 md:h-80 lg:h-64 xl:h-72">
-              {/*
-                Place your image at: /public/images/mission.jpg
-                Or change the src to point to your image.
-              */}
               <Image
                 src={missionImage}
                 alt="Teacher with students"
-                fill
+                width={576}
+                height={385}
                 className="object-cover rounded-2xl shadow-lg"
-                sizes="(max-width: 1024px) 70vw, 33vw"
+              
                 priority
               />
-
-              <div className="absolute bottom-4 right-4 bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-4 py-2 rounded-lg shadow-lg">
-                <div className="text-lg font-bold">20+</div>
-                <div className="text-xs">Success Stories</div>
-              </div>
             </div>
           </div>
         </div>
