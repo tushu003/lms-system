@@ -48,7 +48,7 @@ export default function OurValues() {
             </div>
             <h3 className="text-sm font-semibold text-[#1E293B]">Kindness</h3>
             <p className="text-xs text-[#4B5563] text-center">
-              We care deeply about each <br /> student's journey and <br />{" "}
+              We care deeply about each <br /> students journey and <br />{" "}
               success
             </p>
           </article>
