@@ -1,8 +1,8 @@
 import Image, { StaticImageData } from 'next/image';
 import React from 'react';
-import team1 from '@/public/images/team1.jpg';
-import team2 from '@/public/images/team2.jpg';
-import team3 from '@/public/images/team3.jpg';
+import team1 from '@/public/assets/team/sara.png';
+import team2 from '@/public/assets/team/niyon.png';
+import team3 from '@/public/assets/team/ayra.png';
 
 interface Member {
   id: number;
@@ -28,7 +28,7 @@ const teamData: Member[] = [
     title: 'Head of Technology',
     subtitle: '',
     bio: 'AI researcher and former Google engineer specializing in EdTech',
-    image: '/images/team2.jpg',
+    image: team2,
   },
   {
     id: 3,
@@ -36,7 +36,7 @@ const teamData: Member[] = [
     title: 'Academic Director',
     subtitle: '',
     bio: 'PhD in Educational Psychology with expertise in personalized learning',
-    image: '/images/team3.jpg',
+    image: team3,
   },
 ]
 
