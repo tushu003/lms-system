@@ -90,14 +90,4 @@ export default function OurTeams() {
   )
 }
 
-/*
-How to use
-1. Save this file as components/TeamSection.tsx in your Next.js + TypeScript project.
-2. Add three images to public/images/team1.jpg, team2.jpg, team3.jpg. You can use real photos or placeholders.
-3. Make sure Tailwind is configured in your project (tailwind.config.js + global css include).
-4. Import and render <TeamSection /> from any page, for example pages/index.tsx.
 
-Tailwind notes
-- The component uses utility classes compatible with Tailwind v2+.
-- Tweak spacing, typography, colors as needed to match the screenshot exactly.
-*/
