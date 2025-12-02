@@ -1,13 +1,16 @@
-import Image from 'next/image'
-import React from 'react'
+import Image, { StaticImageData } from 'next/image';
+import React from 'react';
+import team1 from '@/public/images/team1.jpg';
+import team2 from '@/public/images/team2.jpg';
+import team3 from '@/public/images/team3.jpg';
 
 interface Member {
-  id: number
-  name: string
-  title: string
-  subtitle?: string
-  bio: string
-  image: string
+  id: number;
+  name: string;
+  title: string;
+  subtitle?: string;
+  bio: string ;
+  image: string | StaticImageData;
 }
 
 const teamData: Member[] = [
@@ -17,7 +20,7 @@ const teamData: Member[] = [
     title: 'Founder & CEO',
     subtitle: '',
     bio: 'Former Stanford professor with 20+ years in educational technology',
-    image: '/images/team1.jpg', // put images in /public/images/
+    image: team1, // put images in /public/images/
   },
   {
     id: 2,
