@@ -89,7 +89,7 @@ export default function PublicNavbar(): React.ReactElement {
           {/* right: CTA */}
           <div className="flex items-center gap-3">
             <div className="hidden md:flex items-center gap-3">
-              <button className="px-4 py-1 rounded-full bg-[#F97316] hover:bg-orange-400 text-sm font-semibold shadow">
+              <button className="px-4 py-1 rounded-[8px] bg-[#F97316] hover:bg-orange-400 text-sm font-semibold shadow">
                 Book Session
               </button>
             </div>

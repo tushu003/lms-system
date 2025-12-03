@@ -14,7 +14,7 @@ export default function OurValues() {
           <span className="inline-block bg-indigo-50 text-indigo-600 rounded-full px-2 py-1 text-sm font-medium mb-2">
             Our Mission
           </span>
-          <h2 className="text-[#1E293B] text-3xl md:text-4xl font-bold">
+          <h2 className="text-[#1E293B] text-3xl md:text-3xl font-bold">
             The Principles That
             <span className="block bg-gradient-to-r from-[#9333EA] to-[#DB2777] bg-clip-text text-transparent">
               Guide Everything We Do

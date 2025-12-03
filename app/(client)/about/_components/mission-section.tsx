@@ -17,7 +17,7 @@ export default function MissionSection(): JSX.Element {
               Our Mission
             </span>
 
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
+            <h2 className="text-3xl sm:text-3xl font-extrabold text-slate-900 leading-tight">
               Unlocking Every
               <br />
               <span className="block bg-gradient-to-r from-[#4F46E5] to-[#9333EA] bg-clip-text text-transparent">
