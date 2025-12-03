@@ -43,10 +43,10 @@ const teamData: Member[] = [
 export default function OurTeams() {
   return (
     <section className="bg-white py-20">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-5xl mx-auto px-6">
         {/* small badge */}
         <div className="text-center mb-6">
-          <span className="inline-block bg-emerald-100 text-emerald-700 text-sm font-medium px-3 py-1 rounded-full">
+          <span className="inline-block bg-gradient-to-r from-[#DCFCE7] to-[#D1FAE5] text-[#166534] text-sm font-medium px-3 py-1 rounded-full">
             Our Team
           </span>
         </div>
@@ -55,7 +55,7 @@ export default function OurTeams() {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight">
             Meet the Passionate
-            <span className="block text-3xl md:text-4xl text-emerald-600">Leaders Behind Our Mission</span>
+            <span className="block text-3xl md:text-4xl bg-gradient-to-r from-[#16A34A] to-[#059669] bg-clip-text text-transparent ">Leaders Behind Our Mission</span>
           </h2>
         </div>
 
