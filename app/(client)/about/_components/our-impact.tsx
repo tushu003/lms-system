@@ -5,14 +5,15 @@ export default function OurImpact() {
     <section className="w-full">
       <div className=" py-10 rounded-t-lg bg-gradient-to-r from-[#4F46E5] via-[#9333EA] to-[#DB2777]">
         {/* Heading */}
+         <div className="text-center mt-4 mb-3">
+          <span className="inline-block bg-white/10 text-white text-sm font-medium px-3 py-1 rounded-full">
+            Our Impact
+          </span>
+        </div>
         <div className="text-center mb-6">
-          <h2 className="text-white text-3xl md:text-2xl font-semibold">
+          <h2 className="text-white text-3xl font-bold">
             Transforming Lives <br /> Through Education
           </h2>
-          <p className="mt-1 text-sm text-[#D1D5DB] max-w-2xl mx-auto">
-            Start lessons from any device and enjoy smooth, modern learning
-            access.
-          </p>
         </div>
 
         {/* Cards */}
