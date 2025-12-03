@@ -53,7 +53,7 @@ export default function OurTeams() {
 
         {/* heading with emphasized second line */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-3xl font-extrabold text-slate-900 leading-tight">
+          <h2 className="text-3xl md:text-3xl font-extrabold text-[#1E293B] leading-tight">
             Meet the Passionate
             <span className="block text-3xl md:text-4xl bg-gradient-to-r from-[#16A34A] to-[#059669] bg-clip-text text-transparent ">Leaders Behind Our Mission</span>
           </h2>
@@ -64,7 +64,7 @@ export default function OurTeams() {
           {teamData.map((member) => (
             <article
               key={member.id}
-              className="bg-white rounded-2xl shadow-md overflow-hidden border border-slate-100"
+              className="bg-white rounded-2xl overflow-hidden "
             >
               <div className="relative h-56 w-full">
                 {/* Image: ensure these files exist at public/images/team1.jpg etc. */}
