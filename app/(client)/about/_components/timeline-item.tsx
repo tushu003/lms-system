@@ -42,10 +42,10 @@ const timelineData: TimelineItem[] = [
 
 export default function TimelineSection() {
   return (
-    <section className="bg-white py-20">
+    <section className="bg-white pt-14 pb-20 ">
       <div className="max-w-5xl mx-auto px-6">
         {/* Badge */}
-        <div className="text-center mb-6">
+        <div className="text-center mb-4">
           <span className="inline-block bg-blue-100 text-blue-700 text-sm font-medium px-3 py-1 rounded-full">
             Our Journey
           </span>
@@ -60,7 +60,7 @@ export default function TimelineSection() {
         </div>
 
         {/* Timeline container */}
-        <div className="relative border-l border-red-200 ml-6 md:ml-1">
+        <div className="relative ml-6 md:ml-1">
           {timelineData.map((item, index) => (
             <div key={index} className=" md:flex md:items-center md:gap-10 relative">
               {/* Dot */}
@@ -69,8 +69,8 @@ export default function TimelineSection() {
 
               {/* Left card */}
               {item.side === "left" && (
-                <div className="md:w-1/2 md:pr-10">
-                  <div className=" border-1 border-[#F3F4F6] p-6 rounded-xl">
+                <div className=" md:w-1/2 md:pr-10">
+                  <div className="flex flex-col items-end border-1 border-[#F3F4F6] px-2 py-4 rounded-xl">
                     <p className="text-sm font-semibold text-blue-600">{item.year}</p>
                     <h3 className="text-lg font-bold text-slate-900 mt-1">{item.title}</h3>
                     <p className="text-sm text-slate-500 mt-2">{item.description}</p>
@@ -84,7 +84,7 @@ export default function TimelineSection() {
               {/* Right card */}
               {item.side === "right" && (
                 <div className="md:w-1/2 md:pl-10 md:order-2 order-1">
-                  <div className=" border-1 border-[#F3F4F6] p-6 rounded-xl">
+                  <div className=" border-1 border-[#F3F4F6] px-2 py-4 rounded-xl">
                     <p className="text-sm font-semibold text-blue-600">{item.year}</p>
                     <h3 className="text-lg font-bold text-slate-900 mt-1">{item.title}</h3>
                     <p className="text-sm text-slate-500 mt-2">{item.description}</p>
