@@ -29,26 +29,26 @@ export default function OurImpact() {
           </article>
           <article className="bg-white/10 backdrop-blur-sm rounded-2xl p-5 flex flex-col items-center gap-1">
             <div className="text-3xl font-bold text-white rounded-md  items-center justify-center">
-              20+
+              1+
             </div>
             <p className="text-xs text-white/70">
-              Students Helped
+              Expert Tutors
             </p>
           </article>
           <article className="bg-white/10 backdrop-blur-sm rounded-2xl p-5 flex flex-col items-center gap-1">
             <div className="text-3xl font-bold text-white rounded-md  items-center justify-center">
-              20+
+              98+
             </div>
             <p className="text-xs text-white/70">
-              Students Helped
+              Success Rate
             </p>
           </article>
           <article className="bg-white/10 backdrop-blur-sm rounded-2xl p-5 flex flex-col items-center gap-1">
             <div className="text-3xl font-bold text-white rounded-md  items-center justify-center">
-              20+
+              5+
             </div>
             <p className="text-xs text-white/70">
-              Students Helped
+              Coutries Served
             </p>
           </article>
 
