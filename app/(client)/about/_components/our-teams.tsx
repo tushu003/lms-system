@@ -78,9 +78,9 @@ export default function OurTeams() {
               </div>
 
               <div className="p-6">
-                <h3 className="text-lg font-semibold text-slate-900">{member.name}</h3>
-                <p className="text-sm text-emerald-600 mt-1 font-medium">{member.title}</p>
-                <p className="text-sm text-slate-500 mt-4">{member.bio}</p>
+                <h3 className="text-lg text-center font-semibold text-slate-900">{member.name}</h3>
+                <p className="text-sm text-center text-emerald-600 mt-1 font-medium">{member.title}</p>
+                <p className="text-sm text-center text-slate-500 mt-4">{member.bio}</p>
               </div>
             </article>
           ))}
