@@ -52,8 +52,8 @@ export default function TimelineSection() {
         </div>
 
         {/* Heading */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-[#1E293B] leading-tight">
+        <div className="text-center mb-14">
+          <h2 className="text-3xl md:text-3xl font-extrabold text-[#1E293B] leading-tight">
             Key Milestones in
             <span className="block bg-gradient-to-r from-[#2563EB] to-[#0891B2] bg-clip-text text-transparent">Our Mission</span>
           </h2>
