@@ -60,16 +60,17 @@ export default function TimelineSection() {
         </div>
 
         {/* Timeline container */}
-        <div className="relative border-l border-slate-200 ml-6 md:ml-1">
+        <div className="relative border-l border-red-200 ml-6 md:ml-1">
           {timelineData.map((item, index) => (
-            <div key={index} className="mb-16 md:flex md:items-center md:gap-10 relative">
+            <div key={index} className=" md:flex md:items-center md:gap-10 relative">
               {/* Dot */}
-              <span className="absolute -left-[11px] md:left-[50%] md:-translate-x-1/2 w-3 h-3 bg-blue-600 rounded-full"></span>
+              <span className="absolute -left-[11px] md:left-[50%] md:-translate-x-1/2 w-3 h-3 bg-gradient-to-r from-[#A855F7] to-[#6366F1] rounded-full"></span>
+              <span className="absolute md:left-[50%] md:-translate-x-1/2 left-[-1px]  h-full w-0.5 bg-gradient-to-t from-[#C7D2FE] to-[#E9D5FF]"></span>
 
               {/* Left card */}
               {item.side === "left" && (
                 <div className="md:w-1/2 md:pr-10">
-                  <div className="bg-white shadow-sm border border-slate-100 p-6 rounded-xl">
+                  <div className=" border-1 border-[#F3F4F6] p-6 rounded-xl">
                     <p className="text-sm font-semibold text-blue-600">{item.year}</p>
                     <h3 className="text-lg font-bold text-slate-900 mt-1">{item.title}</h3>
                     <p className="text-sm text-slate-500 mt-2">{item.description}</p>
@@ -78,12 +79,12 @@ export default function TimelineSection() {
               )}
 
               {/* Empty space for alignment */}
-              <div className="hidden md:block md:w-1/2"></div>
+              <div className="hidden md:block border border-white md:w-1/2"></div>
 
               {/* Right card */}
               {item.side === "right" && (
                 <div className="md:w-1/2 md:pl-10 md:order-2 order-1">
-                  <div className="bg-white shadow-sm border border-slate-100 p-6 rounded-xl">
+                  <div className=" border-1 border-[#F3F4F6] p-6 rounded-xl">
                     <p className="text-sm font-semibold text-blue-600">{item.year}</p>
                     <h3 className="text-lg font-bold text-slate-900 mt-1">{item.title}</h3>
                     <p className="text-sm text-slate-500 mt-2">{item.description}</p>
