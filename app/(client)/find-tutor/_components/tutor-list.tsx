@@ -102,7 +102,7 @@ export default function TutorList() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-start gap-8">
           {/* Left Filters column */}
-          <aside className="w-56 bg-white shadow-sm rounded-2xl p-6 sticky top-8 h-[640px]">
+          <aside className="w-56 bg-white shadow-sm rounded-2xl p-6 top-8 h-[540px]">
             <h3 className="text-xl font-semibold mb-4">Filters</h3>
 
             {[
@@ -209,6 +209,7 @@ export default function TutorList() {
                 
               ))}
             </div>
+              <button className="btn bg-gradient-to-r from-[#4F46E5] to-[#9333EA] hover:bg-[#225bc6] px-4 py-2 rounded-[16px] text-white lg:ml-83 mt-8 mb-8">Load More Tutors →</button>
           </main>
         </div>
       </div>
