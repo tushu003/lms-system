@@ -191,8 +191,8 @@ export default function TutorList() {
                         </div>
 
                         <div className="flex items-center my-2 gap-2">
-                          {t.mode.includes('Virtual') && <span className="text-xs px-2 py-1 border rounded-lg text-[#16A34A]">Virtual</span>}
-                          {t.mode.includes('In-person') && <span className="text-xs px-2 py-1 border rounded-lg text-[#16A34A]">In-person</span>}
+                          {t.mode.includes('Virtual') && <span className="text-xs px-2 py-1 bg-[#EFF6FF] rounded-lg text-[#1D4ED8]">Virtual</span>}
+                          {t.mode.includes('In-person') && <span className="text-xs px-2 py-1 bg-[#F0FDF4] rounded-lg text-[#16A34A]">In-person</span>}
                         </div>
 
                         <div className="ml-auto text-sm">
@@ -201,7 +201,7 @@ export default function TutorList() {
                       </div>
 
                       <div className="mt-5 flex gap-3">
-                        <button className="w-full px-2 py-2 rounded-lg bg-gradient-to-r from-indigo-600 to-violet-500 text-white font-medium">Book Session</button>
+                        <button className="w-full px-2 py-2 rounded-lg bg-gradient-to-r from-[#4F46E5] to-[#9333EA] text-white font-medium">Book Session</button>
                         <button className="w-full px-2 py-2 rounded-lg border border-slate-200 bg-white">View Profile</button>
                       </div>
                     </div>
