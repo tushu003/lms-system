@@ -160,7 +160,7 @@ export default function TutorList() {
                           <span className="font-semibold text-slate-800">{t.rating}</span>
                           <span className="text-slate-400">({t.reviews} reviews)</span>
                         </div>
-                        <p className="text-xs text-slate-400 mt-1">{t.sessions} sessions completed</p>
+                        <p className="text-xs text-slate-400 mt-1">{t.sessions} sessions <br /> completed</p>
                       </div>
 
                       <div className="text-right">
@@ -172,9 +172,11 @@ export default function TutorList() {
                   </div>
                 </div>
                 <div className="mt-3">
-                      <div className="flex gap-2 flex-wrap">
+                    Subjects:
+                      <div className="flex gap-2 flex-wrap mt-2">
+                        
                         {t.subjects.map((s) => (
-                          <span key={s} className="text-xs border border-slate-100 px-2 py-1 rounded-full bg-slate-50">{s}</span>
+                          <span key={s} className="text-xs text-[#4338CA] border border-slate-100 px-2 py-1 rounded-full bg-[#EEF2FF]">{s}</span>
                         ))}
                       </div>
 
