@@ -21,7 +21,7 @@ export default function TutorBanner() {
           match for <br /> your learning style and goals.
         </p>
         <div>
-            <input type="search" value="Search by name, subject, or keyword..." className="w-80 mt-4 text-white/80 bg-white/20 text-[12px] py-2 rounded-[8px] px-4" />
+            <input type="search" value="Search by name, subject, or keyword..." className="lg:w-80 mt-4 text-white/80 bg-white/20 text-[12px] py-2 rounded-[8px] px-4" />
         </div>
         
       </div>
