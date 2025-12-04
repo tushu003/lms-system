@@ -191,12 +191,12 @@ export default function TutorList() {
                         </div>
 
                         <div className="flex items-center my-2 gap-2">
-                          {t.mode.includes('Virtual') && <span className="text-xs px-2 py-1 border rounded-lg">Virtual</span>}
-                          {t.mode.includes('In-person') && <span className="text-xs px-2 py-1 border rounded-lg">In-person</span>}
+                          {t.mode.includes('Virtual') && <span className="text-xs px-2 py-1 border rounded-lg text-[#16A34A]">Virtual</span>}
+                          {t.mode.includes('In-person') && <span className="text-xs px-2 py-1 border rounded-lg text-[#16A34A]">In-person</span>}
                         </div>
 
                         <div className="ml-auto text-sm">
-                          <div className="text-green-600">Next availability: <span className="font-semibold text-slate-800">{t.availability}</span></div>
+                          <div className="text-[#16A34A]">Next availability: <span className="font-semibold text-slate-800">{t.availability}</span></div>
                         </div>
                       </div>
 
