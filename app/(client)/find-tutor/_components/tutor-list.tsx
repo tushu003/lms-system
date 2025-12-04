@@ -140,7 +140,9 @@ export default function TutorList() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {tutors.map((t) => (
-                <article key={t.id} className="bg-white rounded-2xl shadow-md p-6 flex gap-6">
+                
+               <div key={t.id} className="bg-white rounded-2xl shadow-md p-6 ">
+                <div className="flex gap-6">
                   <div className="w-24 h-24 rounded-lg bg-slate-200 flex-shrink-0 flex items-center justify-center text-slate-500">
                     {/* avatar placeholder */}
                     <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -166,7 +168,10 @@ export default function TutorList() {
                       </div>
                     </div>
 
-                    <div className="mt-3">
+                    
+                  </div>
+                </div>
+                <div className="mt-3">
                       <div className="flex gap-2 flex-wrap">
                         {t.subjects.map((s) => (
                           <span key={s} className="text-xs border border-slate-100 px-2 py-1 rounded-full bg-slate-50">{s}</span>
@@ -198,8 +203,8 @@ export default function TutorList() {
                         <button className="px-2 py-2 rounded-lg border border-slate-200 bg-white">View Profile</button>
                       </div>
                     </div>
-                  </div>
-                </article>
+               </div>
+                
               ))}
             </div>
           </main>
