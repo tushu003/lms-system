@@ -136,7 +136,7 @@ export default function TutorList() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-start gap-8">
           {/* Left Filters column */}
-          <aside className="w-56 bg-white shadow-sm rounded-2xl p-6 top-8 h-[540px]">
+          <aside className="w-56 bg-white rounded-2xl p-6 top-8 h-[540px]">
             <h3 className="text-xl font-semibold mb-4">Filters</h3>
 
             {[
@@ -174,7 +174,7 @@ export default function TutorList() {
               </div>
 
               <div>
-                <button className="text-sm bg-white border border-slate-200 px-4 py-2 rounded-lg shadow-sm">
+                <button className="text-sm bg-white border border-slate-200 px-4 py-2 rounded-lg">
                   Sort by Rating
                 </button>
               </div>
@@ -184,9 +184,9 @@ export default function TutorList() {
               {tutors.map((t, idx) => (
                 <div
                   key={`${t.id}-${idx}`}
-                  className="bg-white rounded-2xl shadow-md p-6 "
+                  className="bg-white rounded-2xl  p-4 "
                 >
-                  <div className="flex gap-6">
+                  <div className="flex gap-4">
                     <div className="w-24 h-24 rounded-lg bg-slate-200 flex-shrink-0 flex items-center justify-center text-slate-500">
                       {/* avatar placeholder */}
                       <svg
