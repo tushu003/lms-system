@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from "react";
 
 type Tutor = {
@@ -165,7 +165,7 @@ export default function TutorList() {
           <main className="flex-1">
             <div className="flex items-center justify-between mb-3">
               <div>
-                <h2 className="text-2xl font-bold text-slate-800">
+                <h2 className="text-2xl font-bold text-[#1E293B]">
                   Available Tutors
                 </h2>
                 <p className="text-sm text-slate-500 mt-1">
@@ -345,8 +345,7 @@ export default function TutorList() {
               {/* Your Name */}
               <div>
                 <label className="block text-sm font-medium text-slate-700 mb-2">
-                  Your Name{" "}
-                  <span className="text-red-500">*</span>
+                  Your Name <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="text"
@@ -361,8 +360,7 @@ export default function TutorList() {
               {/* Subject */}
               <div>
                 <label className="block text-sm font-medium text-slate-700 mb-2">
-                  Subject{" "}
-                  <span className="text-red-500">*</span>
+                  Subject <span className="text-red-500">*</span>
                 </label>
                 <select
                   name="subject"
@@ -383,8 +381,7 @@ export default function TutorList() {
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-slate-700 mb-2">
-                    Date{" "}
-                    <span className="text-red-500">*</span>
+                    Date <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="date"
@@ -396,8 +393,7 @@ export default function TutorList() {
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-slate-700 mb-2">
-                    Time{" "}
-                    <span className="text-red-500">*</span>
+                    Time <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="time"
