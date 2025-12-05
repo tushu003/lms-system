@@ -99,6 +99,12 @@ const tutors: Tutor[] = [
 
 export default function TutorList() {
   const [selectedTutor, setSelectedTutor] = useState<Tutor | null>(null);
+  const [bookingForm, setBookingForm] = useState({
+    name: "",
+    subject: "",
+    date: "",
+    time: "",
+  });
 
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
@@ -113,7 +119,16 @@ export default function TutorList() {
   function confirmBooking(t: Tutor) {
     // placeholder - replace with real booking flow
     console.log("Booking confirmed for", t.name);
+    console.log("Form data:", bookingForm);
     setSelectedTutor(null);
+    setBookingForm({ name: "", subject: "", date: "", time: "" });
+  }
+
+  function handleFormChange(
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) {
+    const { name, value } = e.target;
+    setBookingForm((prev) => ({ ...prev, [name]: value }));
   }
 
   return (
@@ -303,51 +318,113 @@ export default function TutorList() {
       {/* Modal */}
       {selectedTutor && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/40"
           role="dialog"
           aria-modal="true"
+          onClick={() => setSelectedTutor(null)}
         >
           <div
-            className="absolute inset-0 bg-black/40"
-            onClick={() => setSelectedTutor(null)}
-          />
-          <div
-            className="relative bg-white rounded-2xl shadow-xl w-full max-w-md mx-4 p-6 z-10"
+            className="relative bg-white rounded-2xl shadow-2xl w-full max-w-md mx-4 p-8"
             onClick={(e) => e.stopPropagation()}
           >
-            <h3 className="text-lg font-semibold mb-2">
-              Book a session with {selectedTutor.name}
-            </h3>
-            <p className="text-sm text-slate-500 mb-4">{selectedTutor.title}</p>
+            {/* Close button */}
+            <button
+              onClick={() => setSelectedTutor(null)}
+              className="absolute top-4 right-4 text-slate-400 hover:text-slate-600"
+            >
+              ✕
+            </button>
 
-            <div className="text-sm mb-4">
+            <h2 className="text-xl font-bold text-slate-800 mb-6">
+              Book a session with{" "}
+              <span className="text-indigo-600">{selectedTutor.name}</span>
+            </h2>
+
+            {/* Form Fields */}
+            <div className="space-y-4 mb-6">
+              {/* Your Name */}
               <div>
-                Price:{" "}
-                <span className="font-semibold">{selectedTutor.price}</span>
+                <label className="block text-sm font-medium text-slate-700 mb-2">
+                  Your Name{" "}
+                  <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  value={bookingForm.name}
+                  onChange={handleFormChange}
+                  placeholder="John Doe"
+                  className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                />
               </div>
+
+              {/* Subject */}
               <div>
-                Next availability:{" "}
-                <span className="font-semibold">{selectedTutor.availability}</span>
+                <label className="block text-sm font-medium text-slate-700 mb-2">
+                  Subject{" "}
+                  <span className="text-red-500">*</span>
+                </label>
+                <select
+                  name="subject"
+                  value={bookingForm.subject}
+                  onChange={handleFormChange}
+                  className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white"
+                >
+                  <option value="">Select Subject</option>
+                  {selectedTutor.subjects.map((subject) => (
+                    <option key={subject} value={subject}>
+                      {subject}
+                    </option>
+                  ))}
+                </select>
               </div>
-              <div className="mt-2">
-                Mode: {selectedTutor.mode.join(", ")}
+
+              {/* Date and Time */}
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-slate-700 mb-2">
+                    Date{" "}
+                    <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="date"
+                    name="date"
+                    value={bookingForm.date}
+                    onChange={handleFormChange}
+                    className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-slate-700 mb-2">
+                    Time{" "}
+                    <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="time"
+                    name="time"
+                    value={bookingForm.time}
+                    onChange={handleFormChange}
+                    className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  />
+                </div>
               </div>
             </div>
 
-            <div className="flex gap-3">
-              <button
-                onClick={() => confirmBooking(selectedTutor)}
-                className="flex-1 px-3 py-2 rounded-lg bg-gradient-to-r from-[#4F46E5] to-[#9333EA] text-white"
-              >
-                Confirm Booking
-              </button>
-              <button
-                onClick={() => setSelectedTutor(null)}
-                className="flex-1 px-3 py-2 rounded-lg border border-slate-200 bg-white"
-              >
-                Cancel
-              </button>
-            </div>
+            {/* Proceed to Payment Button */}
+            <button
+              onClick={() => confirmBooking(selectedTutor)}
+              className="w-full px-4 py-3 rounded-lg bg-gradient-to-r from-[#4F46E5] to-[#9333EA] text-white font-semibold mb-3 hover:shadow-lg transition"
+            >
+              Proceed to Payment
+            </button>
+
+            {/* Cancel Button */}
+            <button
+              onClick={() => setSelectedTutor(null)}
+              className="w-full px-4 py-2 rounded-lg border border-slate-200 bg-white text-slate-700 font-medium hover:bg-slate-50 transition"
+            >
+              Cancel
+            </button>
           </div>
         </div>
       )}
