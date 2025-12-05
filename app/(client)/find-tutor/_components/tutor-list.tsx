@@ -133,10 +133,10 @@ export default function TutorList() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#F8FAFC] to-[#EFF6FF] py-12">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="flex items-start gap-8">
+      <div className="max-w-5xl mx-auto px-6">
+        <div className="flex items-start gap-4">
           {/* Left Filters column */}
-          <aside className="w-56 bg-white rounded-2xl p-6 top-8 h-[540px]">
+          <aside className="w-56 bg-white rounded-2xl p-4 top-8 h-[540px]">
             <h3 className="text-xl font-semibold mb-4">Filters</h3>
 
             {[
@@ -201,7 +201,7 @@ export default function TutorList() {
                     </div>
 
                     <div className="flex-1 flex flex-col">
-                      <div className="flex items-start justify-between gap-4">
+                      <div className="flex items-start justify-between gap-2">
                         <div>
                           <h3 className="text-lg font-semibold text-slate-800">
                             {t.name}
