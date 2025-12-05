@@ -132,7 +132,7 @@ export default function TutorList() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white to-slate-50 py-12">
+    <div className="min-h-screen bg-gradient-to-br from-[#F8FAFC] to-[#EFF6FF] py-12">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-start gap-8">
           {/* Left Filters column */}
@@ -150,7 +150,7 @@ export default function TutorList() {
                 <label className="block text-sm text-slate-600 mb-2">
                   {label}
                 </label>
-                <button className="w-full text-left bg-slate-50 border border-slate-100 px-3 py-2 rounded-lg text-sm">
+                <button className="w-full text-left border border-[#D1D5DB] px-3 py-2 rounded-lg text-sm">
                   All {label}s
                 </button>
               </div>
