@@ -200,7 +200,7 @@ export default function TutorList() {
                       </svg>
                     </div>
 
-                    <div className="flex-1 flex flex-col">
+                    <div className=" flex flex-col">
                       <div className="flex items-start justify-between gap-2">
                         <div>
                           <h3 className="text-lg font-semibold text-slate-800">
@@ -236,7 +236,7 @@ export default function TutorList() {
                       </div>
                     </div>
                   </div>
-                  <div className="mt-3">
+                  <div className="mt-2">
                     Subjects:
                     <div className="flex gap-2 flex-wrap mt-2">
                       {t.subjects.map((s) => (
