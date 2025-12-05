@@ -52,7 +52,7 @@ const tutors: Tutor[] = [
     subjects: ["Physics", "Chemistry", "Biology"],
     location: "Virtual Only",
     availability: "Tomorrow",
-    mode: ["Virtual"],
+    mode: ["Virtual", "In-person"],
   },
   {
     id: 2,
@@ -65,7 +65,7 @@ const tutors: Tutor[] = [
     subjects: ["Physics", "Chemistry", "Biology"],
     location: "Virtual Only",
     availability: "Tomorrow",
-    mode: ["Virtual"],
+    mode: ["Virtual", "In-person"],
   },
   {
     id: 2,
