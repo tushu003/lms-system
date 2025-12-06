@@ -86,7 +86,7 @@ export default function ContactFormSection(): JSX.Element {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Form Card */}
-          <div className="bg-white max-w-xl rounded-2xl shadow-lg p-6 md:p-8">
+          <div className="bg-white max-w-xl rounded-2xl p-6 md:p-8">
             <h3 className="text-xl text-[#1E293B] font-semibold mb-4">Send us a Message</h3>
 
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -98,7 +98,7 @@ export default function ContactFormSection(): JSX.Element {
                   name="fullName"
                   value={form.fullName}
                   onChange={handleChange}
-                  className="w-full border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200"
+                  className="w-full border-1 border-[#D1D5DB] rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200"
                   placeholder="Enter your full name"
                 />
               </div>
@@ -111,7 +111,7 @@ export default function ContactFormSection(): JSX.Element {
                   name="email"
                   value={form.email}
                   onChange={handleChange}
-                  className="w-full border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200"
+                  className="w-full border-1 border-[#D1D5DB] rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200"
                   placeholder="Enter your email address"
                 />
               </div>
@@ -124,7 +124,7 @@ export default function ContactFormSection(): JSX.Element {
                   name="subject"
                   value={form.subject}
                   onChange={handleChange}
-                  className="w-full border border-slate-200 rounded-lg px-3 py-2 text-sm bg-white focus:outline-none"
+                  className="w-full border-1 border-[#D1D5DB] rounded-lg px-3 py-2 text-sm bg-white focus:outline-none"
                 >
                   <option value="">Select a subject</option>
                   <option>General Inquiry</option>
@@ -142,7 +142,7 @@ export default function ContactFormSection(): JSX.Element {
                   value={form.message}
                   onChange={handleChange}
                   rows={6}
-                  className="w-full border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200"
+                  className="w-full border-1 border-[#D1D5DB] rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200"
                   placeholder="Tell us how we can help you..."
                 />
               </div>
@@ -165,7 +165,7 @@ export default function ContactFormSection(): JSX.Element {
           </div>
 
           {/* Contact Info Card */}
-          <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 h-[439px]">
+          <div className="bg-white rounded-2xl p-6 md:p-8 h-[439px]">
             <h3 className="text-xl text-[#1E293B] font-semibold mb-4">Contact Information</h3>
 
             <ul className="space-y-4">
