@@ -63,16 +63,16 @@ export default function ContactFormSection(): JSX.Element {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white to-slate-50 py-12">
-      <div className="max-w-6xl mx-auto px-6">
+    <div className="min-h-screen bg-gradient-to-br from-[#F8FAFC] to-[#EFF6FF] py-12">
+      <div className="max-w-5xl mx-auto px-6">
         <div className="text-center mb-10">
-          <div className="inline-block px-2 py-1 rounded-full bg-pink-50 text-pink-600 text-sm font-medium">Contact Us</div>
-          <h2 className="mt-6 text-4xl md:text-4xl font-extrabold text-slate-900">We are Here to <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-pink-500">Help You Succeed</span></h2>
+          <div className="inline-block px-2 py-1 rounded-full bg-pink-50 text-[#6B21A8] text-sm font-medium">Contact Us</div>
+          <h2 className="mt-6 text-4xl md:text-4xl font-extrabold text-[#1E293B]">We are Here to <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9333EA] to-[#DB2777]">Help You Succeed</span></h2>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Form Card */}
-          <div className="bg-white rounded-2xl shadow-lg p-6 md:p-10">
+          <div className="bg-white max-w-xl rounded-2xl shadow-lg p-6 md:p-8">
             <h3 className="text-xl font-semibold mb-4">Send us a Message</h3>
 
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -141,7 +141,7 @@ export default function ContactFormSection(): JSX.Element {
           </div>
 
           {/* Contact Info Card */}
-          <div className="bg-white rounded-2xl shadow-lg p-6 md:p-10">
+          <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 h-[439px]">
             <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
 
             <ul className="space-y-4">
