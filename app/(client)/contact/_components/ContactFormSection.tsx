@@ -66,8 +66,8 @@ export default function ContactFormSection(): JSX.Element {
     <div className="min-h-screen bg-gradient-to-br from-white to-slate-50 py-12">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-10">
-          <div className="inline-block px-3 py-1 rounded-full bg-pink-50 text-pink-600 text-sm font-medium">Contact Us</div>
-          <h2 className="mt-6 text-4xl md:text-5xl font-extrabold text-slate-900">We are Here to <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-pink-500">Help You Succeed</span></h2>
+          <div className="inline-block px-2 py-1 rounded-full bg-pink-50 text-pink-600 text-sm font-medium">Contact Us</div>
+          <h2 className="mt-6 text-4xl md:text-4xl font-extrabold text-slate-900">We are Here to <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-pink-500">Help You Succeed</span></h2>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
