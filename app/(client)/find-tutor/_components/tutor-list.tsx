@@ -117,7 +117,6 @@ export default function TutorList() {
   }, [selectedTutor]);
 
   function confirmBooking(t: Tutor) {
-    // placeholder - replace with real booking flow
     console.log("Booking confirmed for", t.name);
     console.log("Form data:", bookingForm);
     setSelectedTutor(null);
@@ -132,7 +131,7 @@ export default function TutorList() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#F8FAFC] to-[#EFF6FF] py-12">
+    <div className="min-h-screen bg-gradient-to-r from-[#F8FAFC] to-[#EFF6FF] py-12">
       <div className="max-w-5xl mx-auto px-6">
         <div className="flex items-start gap-4">
           {/* Left Filters column */}
