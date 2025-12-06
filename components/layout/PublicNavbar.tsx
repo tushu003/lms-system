@@ -23,6 +23,10 @@ const NavItems: NavItemProps[] = [
     href: "/find-tutor",
   },
   {
+    label: "Contact",
+    href: "/contact",
+  },
+  {
     label: " A Student Portal",
     href: "/student-portal",
   },
