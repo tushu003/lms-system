@@ -56,7 +56,7 @@ const FAQSection: React.FC = () => {
           
           <h1 className="text-3xl sm:text-5xl font-bold text-gray-900 mb-4">
             Frequently Asked{' '}
-            <br /><span className="text-blue-600">Questions</span>
+            <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2563EB] to-[#0891B2]">Questions</span>
           </h1>
           
           <p className="text-gray-600 text-lg">
