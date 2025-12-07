@@ -104,7 +104,7 @@ const FAQSection: React.FC = () => {
         <div className="mt-12 text-center bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-8 text-white">
           <h3 className="text-2xl font-bold mb-2">Still have questions?</h3>
           <p className="mb-6 text-blue-100">
-            Can't find the answer you're looking for? Our support team is here to help.
+            Can&apos;t find the answer you&apos;re looking for? Our support team is here to help.
           </p>
           <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200 shadow-lg">
             Contact Support

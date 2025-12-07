@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function SuccessStory() {
@@ -14,7 +15,7 @@ export default function SuccessStory() {
         journey. Your perfect tutor is just one click away.
       </p>
       <div className="flex justify-center gap-4 mt-6">
-        <button className="btn bg-white hover:bg-amber-100 text-[#003466] px-3 py-2 rounded-lg">Find Your tutor Now →</button>
+        <Link href="/find-tutor" className=" bg-white text-[#003466] px-3 py-2 rounded-lg">Find A Tutor →</Link>
         <button className=" bg-white/20 text-[#003466] px-3 py-2 rounded-lg">Become A Tutor</button>
       </div>
     </div>

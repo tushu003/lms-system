@@ -21,7 +21,7 @@ export default function MissionSection(): JSX.Element {
               Unlocking Every
               <br />
               <span className="block bg-gradient-to-r from-[#4F46E5] to-[#9333EA] bg-clip-text text-transparent">
-                Student's Potential
+                Student&apos;s Potential
               </span>
             </h2>
 
@@ -32,7 +32,7 @@ export default function MissionSection(): JSX.Element {
             </p>
 
             <p className="mt-4 text-slate-600 max-w-2xl">
-              We're not just about improving grades — we're about building
+              We&apos;re not just about improving grades — we&apos;re about building
               confidence, fostering critical thinking, and preparing students for
               lifelong success.
             </p>

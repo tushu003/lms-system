@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import React from "react";
 
 export default function ContactBanner() {
@@ -9,7 +10,7 @@ export default function ContactBanner() {
         </span>
 
         <h2 className="text-4xl sm:text-5xl font-bold text-white">
-          Let's Start Your
+          Let&apos;s Start Your
           <br />
           <span className="block bg-gradient-to-r from-[#FACC15] via-[#F472B6] to-[#60A5FA] bg-clip-text text-transparent">
             Learning Journey
@@ -21,10 +22,10 @@ export default function ContactBanner() {
           match for <br /> your learning style and goals.
         </p>
         <div className="flex justify-center items-center gap-4 mt-4">
-            <button className="btn bg-gradient-to-r from-[#6366F1] mt-2 to-[#A855F7] hover:bg-amber-100 text-white px-3 py-2 rounded-lg">Send Massage →</button>
-            <button className="btn bg-white/10 hover:bg-amber-100 hover:text-black text-white px-3 py-2 mt-2 rounded-lg">View FAQ →</button>
+          {/* <button className="btn bg-gradient-to-r from-[#6366F1] mt-2 to-[#A855F7] hover:bg-amber-100 text-white px-3 py-2 rounded-lg">Send Massage →</button> */}
+          <Button variant="customPrimary">Send Message →</Button>
+          <Button variant="customSecondary">View FAQ →</Button>
         </div>
-        
       </div>
     </div>
   );
