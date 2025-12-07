@@ -22,7 +22,7 @@ export default function ContactBanner() {
         </p>
         <div className="flex justify-center items-center gap-4 mt-4">
             <button className="btn bg-gradient-to-r from-[#6366F1] mt-2 to-[#A855F7] hover:bg-amber-100 text-white px-3 py-2 rounded-lg">Send Massage →</button>
-            <button className="btn bg-white/10 hover:bg-amber-100 text-white px-3 py-2 mt-2 rounded-lg">View FAQ →</button>
+            <button className="btn bg-white/10 hover:bg-amber-100 hover:text-black text-white px-3 py-2 mt-2 rounded-lg">View FAQ →</button>
         </div>
         
       </div>

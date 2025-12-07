@@ -101,7 +101,7 @@ const FAQSection: React.FC = () => {
         </div>
 
         {/* Footer CTA */}
-        <div className="mt-12 text-center bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">
+        <div className="mt-12 text-center bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-8 text-white">
           <h3 className="text-2xl font-bold mb-2">Still have questions?</h3>
           <p className="mb-6 text-blue-100">
             Can't find the answer you're looking for? Our support team is here to help.
