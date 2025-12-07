@@ -54,7 +54,7 @@ const FAQSection: React.FC = () => {
             FAQ
           </div>
           
-          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-3xl sm:text-4xl font-bold text-[#1E293B] mb-4">
             Frequently Asked{' '}
             <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2563EB] to-[#0891B2]">Questions</span>
           </h1>
@@ -75,7 +75,7 @@ const FAQSection: React.FC = () => {
                 onClick={() => toggleQuestion(index)}
                 className="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset"
               >
-                <span className="text-gray-900 font-medium pr-4">
+                <span className="text-[#1E293B] font-medium pr-4">
                   {faq.question}
                 </span>
                 <ChevronDown
