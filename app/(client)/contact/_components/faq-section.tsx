@@ -54,7 +54,7 @@ const FAQSection: React.FC = () => {
             FAQ
           </div>
           
-          <h1 className="text-3xl sm:text-5xl font-bold text-gray-900 mb-4">
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
             Frequently Asked{' '}
             <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2563EB] to-[#0891B2]">Questions</span>
           </h1>
@@ -69,7 +69,7 @@ const FAQSection: React.FC = () => {
           {faqData.map((faq, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden transition-all duration-200 hover:shadow-md"
+              className="bg-white rounded-xl border-1 border-gray-100 overflow-hidden transition-all duration-200 hover:shadow-md"
             >
               <button
                 onClick={() => toggleQuestion(index)}
