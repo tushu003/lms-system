@@ -296,7 +296,7 @@ export default function TutorList() {
             </h2>
 
             <div className="space-y-4">
-              {/* Name */}
+            
               <div>
                 <label className="text-sm font-medium">Your Name</label>
                 <input
