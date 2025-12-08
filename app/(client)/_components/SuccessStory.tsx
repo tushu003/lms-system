@@ -4,10 +4,10 @@ import React from "react";
 export default function SuccessStory() {
   return (
     <div className="bg-gradient-to-r from-[#F97316] via-[#EC4899] to-[#9333EA] py-12 px-auto">
-      <span className="bg-white/20 text-white lg:ml-140 mb-2 inline-flex items-center justify-center px-2 py-1 rounded-full text-center text-sm">
+      <span className="bg-white/20 text-white ml-30 lg:ml-140 mb-2 inline-flex items-center justify-center px-2 py-1 rounded-full text-center text-sm">
         Ready to Transform?
       </span>
-      <h2 className="text-4xl font-bold text-white text-center">
+      <h2 className="text-3xl lg:text-4xl font-bold text-white text-center">
         Your Success Story <br/> Starts Today
       </h2>
       <p className="text-center text-white/90 my-1">
