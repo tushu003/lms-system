@@ -26,7 +26,7 @@ export default function OurValues() {
         </div>
 
         {/* Cards */}
-        <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
+        <div className="max-w-5xl lg:mx-auto grid lg:grid-cols-4 grid-cols-2 md:grid-cols-4 lg:gap-5 gap-3 mx-4">
           {/* Card 1 */}
           <article className="bg-white backdrop-blur-sm rounded-2xl p-6 flex flex-col items-center gap-2">
             <div className="w-12 h-12 bg-gradient-to-r from-[#6366F1] to-[#A855F7] text-white rounded-md flex items-center justify-center text-xl">
