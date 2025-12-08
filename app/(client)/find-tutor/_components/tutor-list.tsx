@@ -137,7 +137,7 @@ export default function TutorList() {
      
         <div className="flex flex-col lg:flex-row items-start gap-6">
 
-          {/* Sidebar — Responsive */}
+         
           <aside className="w-full lg:w-64 bg-white rounded-2xl p-5 shadow-sm lg:sticky top-6">
             <h3 className="text-xl font-semibold mb-4">Filters</h3>
 
