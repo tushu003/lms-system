@@ -16,7 +16,7 @@ export default function LearnAnywhere() {
         </div>
 
         {/* Cards */}
-        <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
+        <div className="max-w-5xl mx-4 lg:mx-auto grid lg:grid-cols-4 grid-cols-2 md:grid-cols-4 gap-3 lg:gap-5">
           {/* Card 1 */}
           <article className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 flex flex-col items-center gap-2">
             <div className="w-12 h-12 bg-gradient-to-r from-[#003466] to-[#1271CD] text-white rounded-md flex items-center justify-center text-xl">
