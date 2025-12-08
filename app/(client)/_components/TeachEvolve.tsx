@@ -21,7 +21,7 @@ export default function TeachEvolve() {
         </div>
 
         {/* Cards */}
-        <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
+        <div className="max-w-5xl mx-4 gap-3 lg:mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 lg:gap-5">
           {/* Card 1 */}
           <article className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 flex flex-col items-center gap-2">
             <div className="w-12 h-12 bg-gradient-to-r from-[#6366F1] to-[#A855F7] text-white rounded-md flex items-center justify-center text-xl">
@@ -40,7 +40,7 @@ export default function TeachEvolve() {
             <div className="w-12 h-12 bg-gradient-to-r from-[#22C55E] to-[#10B981] text-white rounded-md flex items-center justify-center text-xl">
               <Image src={teach2} alt="icons" width={20} height={20} />
             </div>
-            <h3 className="text-sm font-semibold text-[#1E293B]">
+            <h3 className="text-sm text-center font-semibold text-[#1E293B]">
               Personalized Learning
             </h3>
             <p className="text-xs text-[#4B5563] text-center">
@@ -53,7 +53,7 @@ export default function TeachEvolve() {
             <div className="w-12 h-12 bg-gradient-to-r from-[#EC4899] to-[#F43F5E] text-white rounded-md flex items-center justify-center text-xl">
               <Image src={teach3} alt="icons" width={20} height={20} />
             </div>
-            <h3 className="text-sm font-semibold text-[#1E293B]">
+            <h3 className="text-sm text-center font-semibold text-[#1E293B]">
               Flexible Scheduling
             </h3>
             <p className="text-xs text-[#4B5563] text-center">
