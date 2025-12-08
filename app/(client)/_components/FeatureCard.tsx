@@ -10,7 +10,7 @@ const Badge: React.FC<{ children: React.ReactNode }> = ({ children }) => (
 
 const FeatureCard: React.FC<{ feature: Feature }> = ({ feature }) => {
   return (
-    <article className="bg-white max-w-5xl mx-auto rounded-xl shadow-sm overflow-hidden ring-1 ring-gray-100">
+    <article className="bg-white max-w-5xl mx-4 lg:mx-auto rounded-xl shadow-sm overflow-hidden ring-1 ring-gray-100">
       <div className="relative w-full h-44 md:h-48 lg:h-56 bg-gray-100">
         <Image
           src={feature.image}
@@ -22,7 +22,7 @@ const FeatureCard: React.FC<{ feature: Feature }> = ({ feature }) => {
       </div>
 
       <div className="p-5">
-        <h3 className="text-[24px] font-[700] text-[#1E293B]">
+        <h3 className="text-xl lg:text-[24px] font-[700] text-[#1E293B]">
           {feature.title}
         </h3>
         <p className="mt-2 text-sm text-[#4B5563]">{feature.description}</p>
