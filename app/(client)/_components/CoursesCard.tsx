@@ -10,7 +10,7 @@ const Badge: React.FC<{ children: React.ReactNode }> = ({ children }) => (
 
 const CoursesCard: React.FC<{ course: typeof courses[number] }> = ({ course }) => {
   return (
-    <article className="bg-white max-w-5xl pb-6 mx-auto rounded-xl shadow-sm overflow-hidden ring-1 ring-gray-100">
+    <article className="bg-white max-w-5xl pb-6 mx-4 lg:mx-auto rounded-xl shadow-sm overflow-hidden ring-1 ring-gray-100">
       <div className="relative w-full ">
         <Image
           src={course.image}
