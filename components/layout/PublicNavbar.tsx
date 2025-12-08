@@ -42,7 +42,7 @@ export default function PublicNavbar(): React.ReactElement {
 
   return (
     <header className="bg-gradient-to-r from-[#12142D] via-[#24184A] to-[#331D67] text-white">
-      <div className="w-11/12 mx-auto px-1 sm:px-3 lg:px-1">
+      <div className="w-11/12 mx-auto px-1 lg:px-1">
         <div className="flex items-center justify-between h-20">
           {/* left: logo */}
           <div className="flex items-center gap-4">
@@ -164,7 +164,7 @@ export default function PublicNavbar(): React.ReactElement {
                 Tutor Portal
               </Link>
               <div className="px-2 pt-2">
-                <button className="w-[8px] px-4 py-2 rounded-full bg-orange-500 text-sm font-semibold">
+                <button className=" px-4 py-2 rounded-lg bg-orange-500 text-sm font-semibold">
                   Book Session
                 </button>
               </div>
