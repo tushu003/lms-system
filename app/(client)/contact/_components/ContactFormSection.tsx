@@ -16,6 +16,7 @@ export default function ContactFormSection(): JSX.Element {
     subject: "",
     message: "",
   });
+
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -49,11 +50,9 @@ export default function ContactFormSection(): JSX.Element {
 
     setLoading(true);
 
-    // Simulate a network request. In a real app you would POST to an API route like `/api/contact`.
     try {
       await new Promise((res) => setTimeout(res, 900));
 
-      // Optionally store the message in localStorage for demo purposes
       const saved = JSON.parse(localStorage.getItem("contactMessages") || "[]");
       saved.push({ ...form, createdAt: new Date().toISOString() });
       localStorage.setItem("contactMessages", JSON.stringify(saved));
@@ -70,26 +69,32 @@ export default function ContactFormSection(): JSX.Element {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#F8FAFC] to-[#EFF6FF] py-12">
-      <div className="max-w-5xl mx-auto px-6">
+    <div className="min-h-screen bg-gradient-to-br from-[#F8FAFC] to-[#EFF6FF] py-8 md:py-12">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
         <div className="text-center mb-10">
-          <div className="inline-block px-2 py-1 rounded-full bg-pink-50 text-[#6B21A8] text-sm font-medium">
+          <div className="inline-block px-3 py-1 rounded-full bg-pink-50 text-[#6B21A8] text-xs sm:text-sm font-medium">
             Contact Us
           </div>
-          <h2 className="mt-6 text-4xl md:text-4xl font-extrabold text-[#1E293B]">
-            We are Here to <br />{" "}
+
+          <h2 className="mt-6 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1E293B] leading-tight">
+            We are Here to <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9333EA] to-[#DB2777]">
               Help You Succeed
             </span>
           </h2>
         </div>
 
+        {/* Grid Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Form Card */}
-          <div className="bg-white max-w-xl rounded-2xl p-6 md:p-8">
-            <h3 className="text-xl text-[#1E293B] font-semibold mb-4">Send us a Message</h3>
+          <div className="bg-white rounded-2xl p-5 sm:p-6 md:p-8 w-full">
+            <h3 className="text-xl text-[#1E293B] font-semibold mb-4">
+              Send us a Message
+            </h3>
 
             <form onSubmit={handleSubmit} className="space-y-4">
+              {/* Full Name */}
               <div>
                 <label className="block text-sm text-slate-600 mb-2">
                   Full Name *
@@ -98,11 +103,12 @@ export default function ContactFormSection(): JSX.Element {
                   name="fullName"
                   value={form.fullName}
                   onChange={handleChange}
-                  className="w-full border-1 border-[#D1D5DB] rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200"
+                  className="w-full border border-[#D1D5DB] rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200"
                   placeholder="Enter your full name"
                 />
               </div>
 
+              {/* Email */}
               <div>
                 <label className="block text-sm text-slate-600 mb-2">
                   Email Address *
@@ -111,11 +117,12 @@ export default function ContactFormSection(): JSX.Element {
                   name="email"
                   value={form.email}
                   onChange={handleChange}
-                  className="w-full border-1 border-[#D1D5DB] rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200"
+                  className="w-full border border-[#D1D5DB] rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200"
                   placeholder="Enter your email address"
                 />
               </div>
 
+              {/* Subject */}
               <div>
                 <label className="block text-sm text-slate-600 mb-2">
                   Subject *
@@ -124,7 +131,7 @@ export default function ContactFormSection(): JSX.Element {
                   name="subject"
                   value={form.subject}
                   onChange={handleChange}
-                  className="w-full border-1 border-[#D1D5DB] rounded-lg px-3 py-2 text-sm bg-white focus:outline-none"
+                  className="w-full border border-[#D1D5DB] rounded-lg px-3 py-2 text-sm bg-white focus:outline-none"
                 >
                   <option value="">Select a subject</option>
                   <option>General Inquiry</option>
@@ -133,6 +140,7 @@ export default function ContactFormSection(): JSX.Element {
                 </select>
               </div>
 
+              {/* Message */}
               <div>
                 <label className="block text-sm text-slate-600 mb-2">
                   Message *
@@ -142,7 +150,7 @@ export default function ContactFormSection(): JSX.Element {
                   value={form.message}
                   onChange={handleChange}
                   rows={6}
-                  className="w-full border-1 border-[#D1D5DB] rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200"
+                  className="w-full border border-[#D1D5DB] rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200"
                   placeholder="Tell us how we can help you..."
                 />
               </div>
@@ -152,38 +160,36 @@ export default function ContactFormSection(): JSX.Element {
                 <div className="text-sm text-green-600">{success}</div>
               )}
 
-              <div>
-                <button
-                  type="submit"
-                  disabled={loading}
-                  className="w-full py-3 rounded-lg bg-gradient-to-r from-indigo-600 to-pink-500 text-white font-medium disabled:opacity-60"
-                >
-                  {loading ? "Sending..." : "Send Message"}
-                </button>
-              </div>
+              {/* Button */}
+              <button
+                type="submit"
+                disabled={loading}
+                className="w-full py-3 rounded-lg bg-gradient-to-r from-indigo-600 to-pink-500 text-white font-medium disabled:opacity-60"
+              >
+                {loading ? "Sending..." : "Send Message"}
+              </button>
             </form>
           </div>
 
           {/* Contact Info Card */}
-          <div className="bg-white rounded-2xl p-6 md:p-8 h-[439px]">
-            <h3 className="text-xl text-[#1E293B] font-semibold mb-4">Contact Information</h3>
+          <div className="bg-white rounded-2xl p-5 sm:p-6 md:p-8 w-full h-auto">
+            <h3 className="text-xl text-[#1E293B] font-semibold mb-4">
+              Contact Information
+            </h3>
 
             <ul className="space-y-4">
+              {/* Email */}
               <li className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg mb-3 flex items-center justify-center bg-gradient-to-r from-[#DB2777] to-[#A855F7] text-white">
-                  {/* mail icon */}
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-gradient-to-r from-[#DB2777] to-[#A855F7]">
                   <svg
                     className="w-5 h-5 text-white"
                     viewBox="0 0 24 24"
                     fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       d="M3 8.5l9 6 9-6"
                       stroke="currentColor"
                       strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
                     />
                     <rect
                       x="3"
@@ -196,6 +202,7 @@ export default function ContactFormSection(): JSX.Element {
                     />
                   </svg>
                 </div>
+
                 <div>
                   <div className="text-sm font-semibold">Email Us</div>
                   <div className="text-sm text-slate-500">
@@ -204,23 +211,22 @@ export default function ContactFormSection(): JSX.Element {
                 </div>
               </li>
 
+              {/* Phone */}
               <li className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-gradient-to-r from-[#3B82F6] to-[#06B6D4]">
                   <svg
                     className="w-5 h-5 text-white"
                     viewBox="0 0 24 24"
                     fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       d="M22 16.92V20a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07A19.5 19.5 0 0 1 2.11 8.81 19.86 19.86 0 0 1-.96 0 2 2 0 0 1 1 2h3.09a2 2 0 0 1 2 1.72 12.34 12.34 0 0 0 .7 3.21 2 2 0 0 1-.45 2.12L5.7 10.7a16 16 0 0 0 6.6 6.6l2.66-1.65a2 2 0 0 1 2.12-.45 12.34 12.34 0 0 0 3.21.7A2 2 0 0 1 22 16.92z"
                       stroke="currentColor"
                       strokeWidth="1.2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
                     />
                   </svg>
                 </div>
+
                 <div>
                   <div className="text-sm font-semibold">Call Us</div>
                   <div className="text-sm text-slate-500">
@@ -233,47 +239,43 @@ export default function ContactFormSection(): JSX.Element {
                 </div>
               </li>
 
+              {/* Address */}
               <li className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-gradient-to-r from-[#10B981] to-[#22C55E]">
                   <svg
                     className="w-5 h-5 text-white"
                     viewBox="0 0 24 24"
                     fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"
                       stroke="currentColor"
                       strokeWidth="1.2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
                     />
                   </svg>
                 </div>
+
                 <div>
                   <div className="text-sm font-semibold">Visit Us</div>
                   <div className="text-sm text-slate-500">
-                    123 Education Street
-                    <br />
+                    123 Education Street <br />
                     Learning City, LC 12345
                   </div>
                 </div>
               </li>
 
+              {/* Hours */}
               <li className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-gradient-to-r from-[#F97316] to-[#EF4444]">
                   <svg
                     className="w-5 h-5 text-white"
                     viewBox="0 0 24 24"
                     fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       d="M8 7V3h8v4"
                       stroke="currentColor"
                       strokeWidth="1.2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
                     />
                     <rect
                       x="3"
@@ -286,13 +288,12 @@ export default function ContactFormSection(): JSX.Element {
                     />
                   </svg>
                 </div>
+
                 <div>
                   <div className="text-sm font-semibold">Office Hours</div>
                   <div className="text-sm text-slate-500">
-                    Mon - Fri: 8 AM - 8 PM
-                    <br />
-                    Sat: 9 AM - 5 PM
-                    <br />
+                    Mon - Fri: 8 AM - 8 PM <br />
+                    Sat: 9 AM - 5 PM <br />
                     Sun: Closed
                   </div>
                 </div>
