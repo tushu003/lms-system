@@ -163,7 +163,7 @@ export default function TutorList() {
             </button>
           </aside>
 
-          {/* Main Content */}
+          
           <main className="flex-1 w-full">
             <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
               <div>
