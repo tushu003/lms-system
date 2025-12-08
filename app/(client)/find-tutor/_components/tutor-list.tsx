@@ -82,7 +82,7 @@ export default function TutorList() {
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         
-        {/* Layout → Mobile: stacked | Desktop: sidebar + content */}
+     
         <div className="flex flex-col lg:flex-row items-start gap-6">
 
           {/* Sidebar — Responsive */}
