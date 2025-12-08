@@ -96,7 +96,7 @@ const tutors: Tutor[] = [
     mode: ["Virtual"],
   },
 
-  // Repeated entries removed (optional improvement)
+  
 ];
 
 export default function TutorList() {
