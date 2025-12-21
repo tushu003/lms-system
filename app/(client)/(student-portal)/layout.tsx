@@ -28,7 +28,7 @@ export default function StudentPortalLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="flex w-full gap-4">
+        <div className="flex w-10/12 mx-auto gap-4">
           <div className="w-[30%] bg-gray-300 h-screen">
             <Sidebar />
           </div>
