@@ -27,7 +27,7 @@ export default function Sidebar() {
 
   return (
     <aside className="w-64 p-4">
-      <div className="rounded-2xl shadow-md p-3 space-y-1">
+      <div className="rounded-2xl mt-8 bg-white p-4 space-y-1">
         {menuItems.map((item) => {
           const isActive = pathname === item.href;
           const Icon = item.icon;
