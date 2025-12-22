@@ -1,6 +1,6 @@
 import React from "react";
 import { IoMdNotificationsOutline } from "react-icons/io";
-// import { IoMdNotificationsOutline } from "react-icons/io";
+
 
 export default function StudentBanner() {
   return (
