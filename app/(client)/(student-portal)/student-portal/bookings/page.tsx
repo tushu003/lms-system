@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Booking() {
+export default function Bookings() {
   return (
     <div>
         Booking Page

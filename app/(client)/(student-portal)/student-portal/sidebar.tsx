@@ -40,7 +40,7 @@ export default function Sidebar() {
                 ${
                   isActive
                     ? "bg-gradient-to-r from-purple-500 to-indigo-500 text-white shadow"
-                    : "text-gray-600 hover:bg-gray-100"
+                    : "text-gray-600 hover:bg-gray-300"
                 }
               `}
             >
