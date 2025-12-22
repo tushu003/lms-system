@@ -1,7 +1,6 @@
 import React from "react";
 import { IoMdNotificationsOutline } from "react-icons/io";
 
-
 export default function StudentBanner() {
   return (
     <div className="bg-gradient-to-br from-[#312E81] via-[#581C87] to-[#831843] py-12">
@@ -25,11 +24,13 @@ export default function StudentBanner() {
         </div>
         <div className="flex items-center gap-4">
           <div className="text-white">
-            <IoMdNotificationsOutline size={32}/>
+            <IoMdNotificationsOutline size={32} />
           </div>
           <div>
             <p className="text-white">Next Session in</p>
-            <p className="text-3xl font-bold block bg-gradient-to-r from-[#F97316] to-[#EC4899] bg-clip-text text-transparent ">2 hours</p>
+            <p className="text-3xl font-bold block bg-gradient-to-r from-[#F97316] to-[#EC4899] bg-clip-text text-transparent ">
+              2 hours
+            </p>
           </div>
         </div>
       </div>
