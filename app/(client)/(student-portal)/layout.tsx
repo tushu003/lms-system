@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "@/app/globals.css";
 import Sidebar from "./student-portal/sidebar";
+import StudentBanner from "./student-portal/student-banner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,7 +29,8 @@ export default function StudentPortalLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="bg-gradient-to-r from-[#F8FAFC] to-[#EFF6FF]">
+        <div className="bg-gradient-to-br from-[#F8FAFC] to-[#EFF6FF]">
+          <StudentBanner />
           <div className="flex max-w-5xl mx-auto  gap-4">
             <div className="w-[30%] h-screen">
               <Sidebar />
