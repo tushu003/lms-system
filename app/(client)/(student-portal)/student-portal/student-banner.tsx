@@ -6,20 +6,19 @@ export default function StudentBanner() {
      <div className="max-w-5xl mx-auto px-4 flex flex-col md:flex-row justify-between gap-8">
          <div className="max-w-3xl ">
         <span className="inline-flex items-center justify-center px-3 py-1 rounded-full text-sm bg-white/10 text-white mb-4">
-          Our Story
+          Student Portal
         </span>
 
         <h2 className="text-4xl sm:text-5xl font-bold text-white">
-          Transforming Education,
+          Welcome Back,
           <br />
-          <span className="block bg-gradient-to-r from-[#FACC15] via-[#F472B6] to-[#60A5FA] bg-clip-text text-transparent">
-            One Student at a Time
+          <span className="block bg-gradient-to-r from-[#FACC15] to-[#F472B6] bg-clip-text text-transparent">
+            Sarah!
           </span>
         </h2>
 
         <p className="text-white/90 my-4">
-          Since 2019, we have been on a mission to make quality education
-          accessible, <br />personalized and Effective
+          Here&apos;s your learning overview and upcoming sessions.
         </p>
       </div>
       <div className="flex gap-2">
