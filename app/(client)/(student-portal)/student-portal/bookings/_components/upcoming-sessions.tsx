@@ -174,23 +174,22 @@ const UpcomingSessions: React.FC = () => {
                       </div>
                     </div>
                   </div>
-
-                  {/* Meeting Link */}
-                  {session.meetingLink && (
-                    <div className="mb-3">
-                      <a
-                        href={`https://${session.meetingLink}`}
-                        className="text-sm text-blue-600 hover:text-blue-700 hover:underline flex items-center gap-1"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Video className="w-3.5 h-3.5" />
-                        {session.meetingLink}
-                      </a>
-                    </div>
-                  )}
                 </div>
               </div>
+              {/* Meeting Link */}
+              {session.meetingLink && (
+                <div className="mb-3">
+                  <a
+                    href={`https://${session.meetingLink}`}
+                    className="text-sm text-blue-600 hover:text-blue-700 hover:underline flex items-center gap-1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Video className="w-3.5 h-3.5" />
+                    {session.meetingLink}
+                  </a>
+                </div>
+              )}
               {/* Description for rescheduled */}
               {session.description && (
                 <div className="mb-4 p-3 bg-pink-50 border border-pink-100 rounded-lg">
