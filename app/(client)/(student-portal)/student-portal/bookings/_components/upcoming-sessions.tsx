@@ -140,7 +140,7 @@ const UpcomingSessions: React.FC = () => {
                   <div className="flex items-start justify-between mb-3">
                     <div>
                       <div className="flex items-center gap-2 mb-1">
-                        <h3 className="text-lg font-semibold text-gray-800">
+                        <h3 className="text-lg font-semibold text-[#1E293B]">
                           {session.title}
                         </h3>
                         {session.subtitle && (
