@@ -91,10 +91,10 @@ const UpcomingSessions: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 p-4 sm:p-6 lg:p-8">
-      <div className="max-w-4xl mx-auto">
+    <div className="">
+      <div className="">
         {/* Header */}
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex items-center justify-between mb-6">
           <h1 className="text-2xl sm:text-3xl font-bold text-gray-800">
             Upcoming Sessions
           </h1>
@@ -130,7 +130,7 @@ const UpcomingSessions: React.FC = () => {
               <div className="flex items-start gap-4">
                 {/* Icon */}
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                  <div className="w-12 h-12 bg-gradient-to-r from-[#6366F1] to-[#A855F7] rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg">
                     <Image src={book} alt="Session Icon" className="w-6 h-6" />
                   </div>
                 </div>
@@ -181,12 +181,12 @@ const UpcomingSessions: React.FC = () => {
                 <div className="mb-3">
                   <a
                     href={`https://${session.meetingLink}`}
-                    className="text-sm text-blue-600 hover:text-blue-700 hover:underline flex items-center gap-1"
+                    className="text-sm   flex items-center gap-1"
                     target="_blank"
                     rel="noopener noreferrer"
-                  >
-                    <Video className="w-3.5 h-3.5" />
-                    {session.meetingLink}
+                  >Join Link: 
+                    <p className="text-blue-600 hover:text-blue-700 hover:underline">
+                     {session.meetingLink}</p>
                   </a>
                 </div>
               )}
@@ -203,7 +203,7 @@ const UpcomingSessions: React.FC = () => {
                   <>
                     <button
                       onClick={() => handleReschedule(session.id)}
-                      className="px-6 py-2 bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white rounded-lg font-medium text-sm shadow-md hover:shadow-lg transition-all duration-200"
+                      className="px-6 py-2 bg-gradient-to-r from-[#6366F1] to-[#A855F7] hover:from-purple-600 hover:to-purple-700 text-white rounded-lg font-medium text-sm shadow-md hover:shadow-lg transition-all duration-200"
                     >
                       Reschedule
                     </button>
@@ -220,7 +220,7 @@ const UpcomingSessions: React.FC = () => {
                       onClick={() =>
                         handleJoinSession(session.id, session.meetingLink)
                       }
-                      className="px-6 py-2 bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white rounded-lg font-medium text-sm shadow-md hover:shadow-lg transition-all duration-200"
+                      className="px-6 py-2 bg-gradient-to-r from-[#6366F1] to-[#A855F7] hover:from-purple-600 hover:to-purple-700 text-white rounded-lg font-medium text-sm shadow-md hover:shadow-lg transition-all duration-200"
                     >
                       Join Session
                     </button>
@@ -249,7 +249,7 @@ const UpcomingSessions: React.FC = () => {
                 </div>
               )}
             </div>
-          ))}
+          ))};
         </div>
 
         {/* Empty State (if no sessions) */}

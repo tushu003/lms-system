@@ -36,7 +36,7 @@ export default function StudentPortalLayout({
               <Sidebar />
             </div>
 
-            <div className="w-[70%] mt-12">{children}</div>
+            <div className="w-[70%] mt-8">{children}</div>
           </div>
         </div>
       </body>

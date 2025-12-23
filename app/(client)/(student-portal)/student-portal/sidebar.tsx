@@ -39,7 +39,7 @@ export default function Sidebar() {
               className={`flex items-center gap-3 px-4 py-3 rounded-xl transition
                 ${
                   isActive
-                    ? "bg-gradient-to-r from-purple-500 to-indigo-500 text-white shadow"
+                    ? "bg-gradient-to-r from-[#6366F1] to-[#A855F7] text-white shadow"
                     : "text-gray-600 hover:bg-gray-300"
                 }
               `}
