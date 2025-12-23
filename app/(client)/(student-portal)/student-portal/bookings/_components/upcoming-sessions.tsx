@@ -95,7 +95,7 @@ const UpcomingSessions: React.FC = () => {
       <div className="">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
-          <h1 className="text-2xl sm:text-3xl font-bold text-gray-800">
+          <h1 className="text-2xl sm:text-3xl font-bold text-[#1E293B">
             Upcoming Sessions
           </h1>
           <div className="flex items-center gap-2 text-sm text-gray-600">
