@@ -6,7 +6,7 @@ export default function Bookings() {
   return (
     <div>
         <UpcomingSessions />
-        {/* <SessionHistory /> */}
+        <SessionHistory />
     </div>
   )
 }

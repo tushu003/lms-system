@@ -49,7 +49,7 @@ const sessions: Session[] = [
 
 export default function SessionHistory() {
   return (
-    <div className="max-w-3xl mb-12">
+    <div className="max-w-3xl mb-18">
       <h2 className="mb-4 mt-4 text-lg font-semibold text-gray-900">
         Session History
       </h2>
