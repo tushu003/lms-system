@@ -34,7 +34,7 @@ const sessions: Session[] = [
     date: '1/8/2024 at 3:00 PM',
     duration: '60 min',
     price: 60,
-    rating: 5,
+    rating: 3,
   },
   {
     id: 3,
@@ -80,9 +80,9 @@ export default function SessionHistory() {
             </div>
 
             {/* Right */}
-            <div className="flex items-center gap-4">
+            <div className="">
               {session.rating !== undefined && (
-                <div className="flex">
+                <div className="flex mb-2">
                   {[1, 2, 3, 4, 5].map((star) =>
                     star <= session.rating! ? (
                       <StarIcon
@@ -105,7 +105,7 @@ export default function SessionHistory() {
                 </button>
               )}
 
-              <span className="font-medium text-gray-900">
+              <span className="font-medium text-gray-900 ml-12 mt-4">
                 ${session.price}
               </span>
             </div>
