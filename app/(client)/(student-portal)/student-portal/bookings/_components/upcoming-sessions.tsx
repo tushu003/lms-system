@@ -211,7 +211,7 @@ const UpcomingSessions: React.FC = () => {
 
               {/* Meeting Link */}
               {session.meetingLink && (
-                <div className="mb-3 ml-16">
+                <div className="mb-3 ">
                   <a
                     href={`https://${session.meetingLink}`}
                     className="text-sm flex items-center gap-1"
@@ -228,13 +228,13 @@ const UpcomingSessions: React.FC = () => {
 
               {/* Description for rescheduled */}
               {session.description && (
-                <div className="mb-4 ml-16 p-3 bg-pink-50 border border-pink-100 rounded-lg">
+                <div className="mb-4 p-3 bg-pink-50 border border-pink-100 rounded-lg">
                   <p className="text-sm text-gray-700">{session.description}</p>
                 </div>
               )}
 
               {/* Action Buttons */}
-              <div className="flex items-center gap-3 ml-16">
+              <div className="flex items-center gap-3">
                 {session.status === "rescheduled" ? (
                   <>
                     <button
