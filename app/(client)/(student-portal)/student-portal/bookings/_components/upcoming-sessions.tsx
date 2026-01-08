@@ -130,7 +130,7 @@ const UpcomingSessions: React.FC = () => {
           <h1 className="text-2xl sm:text-3xl font-bold text-[#1E293B]">
             Upcoming Sessions
           </h1>
-          <div className="flex items-center gap-2 text-sm text-gray-600">
+          <div className="flex items-center gap-2 text-sm text-[#1E293B]">
             <span className="font-medium">All</span>
             <svg
               className="w-4 h-4"
