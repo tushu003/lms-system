@@ -1,8 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { Calendar, Clock, Video, MapPin } from "lucide-react";
-import book from "@/public/assets/icons/teach1.png";
-import Image from "next/image";
+
 interface Session {
   id: string;
   title: string;
@@ -72,6 +71,14 @@ const UpcomingSessions: React.FC = () => {
   ]);
 
   const [selectedSession, setSelectedSession] = useState<string | null>(null);
+  const [showRescheduleModal, setShowRescheduleModal] = useState(false);
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const [rescheduleSessionId, setRescheduleSessionId] = useState<string | null>(null);
+  const [rescheduleData, setRescheduleData] = useState({
+    rating: 0,
+    name: "",
+    comments: ""
+  });
 
   const handleJoinSession = (sessionId: string, meetingLink?: string) => {
     setSelectedSession(sessionId);
@@ -81,7 +88,9 @@ const UpcomingSessions: React.FC = () => {
   };
 
   const handleReschedule = (sessionId: string) => {
-    alert(`Reschedule modal opened for session ${sessionId}`);
+    setRescheduleSessionId(sessionId);
+    setShowRescheduleModal(true);
+    setRescheduleData({ rating: 0, name: "", comments: "" });
   };
 
   const handleCancel = (sessionId: string) => {
@@ -90,12 +99,35 @@ const UpcomingSessions: React.FC = () => {
     }
   };
 
+  const handleSubmitReschedule = () => {
+    if (rescheduleData.rating === 0 || !rescheduleData.name || !rescheduleData.comments) {
+      alert("Please fill all fields");
+      return;
+    }
+    
+    // Save to state (localStorage alternative for artifacts)
+    const savedData = {
+      sessionId: rescheduleSessionId,
+      ...rescheduleData,
+      timestamp: new Date().toISOString()
+    };
+    
+    console.log("Reschedule data saved:", savedData);
+    
+    setShowRescheduleModal(false);
+    setShowSuccessModal(true);
+    
+    setTimeout(() => {
+      setShowSuccessModal(false);
+    }, 3000);
+  };
+
   return (
-    <div className="">
-      <div className="">
+    <div className="min-h-screen bg-gray-50 p-6">
+      <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
-          <h1 className="text-2xl sm:text-3xl font-bold text-[#1E293B">
+          <h1 className="text-2xl sm:text-3xl font-bold text-[#1E293B]">
             Upcoming Sessions
           </h1>
           <div className="flex items-center gap-2 text-sm text-gray-600">
@@ -131,7 +163,7 @@ const UpcomingSessions: React.FC = () => {
                 {/* Icon */}
                 <div className="flex-shrink-0">
                   <div className="w-12 h-12 bg-gradient-to-r from-[#6366F1] to-[#A855F7] rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg">
-                    <Image src={book} alt="Session Icon" className="w-6 h-6" />
+                    📚
                   </div>
                 </div>
 
@@ -176,29 +208,33 @@ const UpcomingSessions: React.FC = () => {
                   </div>
                 </div>
               </div>
+
               {/* Meeting Link */}
               {session.meetingLink && (
-                <div className="mb-3">
+                <div className="mb-3 ml-16">
                   <a
                     href={`https://${session.meetingLink}`}
-                    className="text-sm   flex items-center gap-1"
+                    className="text-sm flex items-center gap-1"
                     target="_blank"
                     rel="noopener noreferrer"
-                  >Join Link: 
+                  >
+                    Join Link: 
                     <p className="text-blue-600 hover:text-blue-700 hover:underline">
-                     {session.meetingLink}</p>
+                      {session.meetingLink}
+                    </p>
                   </a>
                 </div>
               )}
+
               {/* Description for rescheduled */}
               {session.description && (
-                <div className="mb-4 p-3 bg-pink-50 border border-pink-100 rounded-lg">
+                <div className="mb-4 ml-16 p-3 bg-pink-50 border border-pink-100 rounded-lg">
                   <p className="text-sm text-gray-700">{session.description}</p>
                 </div>
               )}
 
               {/* Action Buttons */}
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 ml-16">
                 {session.status === "rescheduled" ? (
                   <>
                     <button
@@ -242,14 +278,14 @@ const UpcomingSessions: React.FC = () => {
 
               {/* Selected Indicator */}
               {selectedSession === session.id && (
-                <div className="mt-4 p-3 bg-green-50 border border-green-200 rounded-lg">
+                <div className="mt-4 ml-16 p-3 bg-green-50 border border-green-200 rounded-lg">
                   <p className="text-sm text-green-700 font-medium">
                     ✓ Session selected - preparing to join...
                   </p>
                 </div>
               )}
             </div>
-          ))};
+          ))}
         </div>
 
         {/* Empty State (if no sessions) */}
@@ -267,6 +303,96 @@ const UpcomingSessions: React.FC = () => {
           </div>
         )}
       </div>
+
+      {/* Reschedule Modal */}
+      {showRescheduleModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-2xl shadow-xl w-full max-w-md p-6">
+            <h2 className="text-xl font-bold text-gray-800 mb-6">Share Your Feedback</h2>
+            
+            {/* Rating */}
+            <div className="mb-4">
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Rate your session <span className="text-red-500">*</span>
+              </label>
+              <div className="flex gap-2">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <button
+                    key={star}
+                    onClick={() => setRescheduleData({...rescheduleData, rating: star})}
+                    className={`w-10 h-10 rounded-lg border-2 flex items-center justify-center font-semibold transition-all ${
+                      rescheduleData.rating >= star
+                        ? "bg-gradient-to-r from-[#6366F1] to-[#A855F7] text-white border-transparent"
+                        : "bg-white text-gray-400 border-gray-200 hover:border-purple-300"
+                    }`}
+                  >
+                    {star}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Name */}
+            <div className="mb-4">
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Your Name <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="text"
+                placeholder="Your Name"
+                value={rescheduleData.name}
+                onChange={(e) => setRescheduleData({...rescheduleData, name: e.target.value})}
+                className="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              />
+            </div>
+
+            {/* Comments */}
+            <div className="mb-6">
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Comments <span className="text-red-500">*</span>
+              </label>
+              <textarea
+                placeholder="Write your comments here"
+                value={rescheduleData.comments}
+                onChange={(e) => setRescheduleData({...rescheduleData, comments: e.target.value})}
+                rows={4}
+                className="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none"
+              />
+            </div>
+
+            {/* Buttons */}
+            <div className="space-y-3">
+              <button
+                onClick={handleSubmitReschedule}
+                className="w-full py-3 bg-gradient-to-r from-[#6366F1] to-[#A855F7] hover:from-purple-600 hover:to-purple-700 text-white rounded-lg font-medium shadow-md hover:shadow-lg transition-all duration-200"
+              >
+                Submit Feedback
+              </button>
+              <button
+                onClick={() => setShowRescheduleModal(false)}
+                className="w-full py-3 bg-white hover:bg-gray-50 text-gray-700 rounded-lg font-medium border border-gray-200 transition-all duration-200"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Success Modal */}
+      {showSuccessModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-2xl shadow-xl w-full max-w-sm p-8 text-center">
+            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold text-gray-800 mb-2">Feedback Submitted!</h3>
+            <p className="text-gray-600">Your reschedule request has been saved successfully.</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
