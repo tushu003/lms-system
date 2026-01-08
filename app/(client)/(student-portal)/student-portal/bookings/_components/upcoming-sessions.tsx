@@ -123,7 +123,7 @@ const UpcomingSessions: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 p-6">
+    <div className="min-h-screen">
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
@@ -162,7 +162,7 @@ const UpcomingSessions: React.FC = () => {
               <div className="flex items-start gap-4">
                 {/* Icon */}
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-gradient-to-r from-[#6366F1] to-[#A855F7] rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                  <div className="w-12 h-12 bg-gradient-to-r from-[#6366F1] to-[#A855F7] rounded-xl flex items-center justify-center">
                     📚
                   </div>
                 </div>
