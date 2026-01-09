@@ -151,6 +151,81 @@ export default function SessionHistory() {
                 </div>
               )}
 
+                    {/* Reschedule Modal */}
+      {showRescheduleModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-2xl shadow-xl w-full max-w-md p-6">
+            <h2 className="text-xl font-bold text-gray-800 mb-6">Share Your Feedback</h2>
+            
+            {/* Rating */}
+            <div className="mb-4">
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Rate your session <span className="text-red-500">*</span>
+              </label>
+              <div className="flex gap-2">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <button
+                    key={star}
+                    onClick={() => setRescheduleData({...rescheduleData, rating: star})}
+                    className={`w-10 h-10 rounded-lg border-2 flex items-center justify-center font-semibold transition-all ${
+                      rescheduleData.rating >= star
+                        ? "bg-gradient-to-r from-[#6366F1] to-[#A855F7] text-white border-transparent"
+                        : "bg-white text-gray-400 border-gray-200 hover:border-purple-300"
+                    }`}
+                  >
+                    {star}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Name */}
+            <div className="mb-4">
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Your Name <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="text"
+                placeholder="Your Name"
+                value={rescheduleData.name}
+                onChange={(e) => setRescheduleData({...rescheduleData, name: e.target.value})}
+                className="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              />
+            </div>
+
+            {/* Comments */}
+            <div className="mb-6">
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Comments <span className="text-red-500">*</span>
+              </label>
+              <textarea
+                placeholder="Write your comments here"
+                value={rescheduleData.comments}
+                onChange={(e) => setRescheduleData({...rescheduleData, comments: e.target.value})}
+                rows={4}
+                className="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none"
+              />
+            </div>
+
+            {/* Buttons */}
+            <div className="space-y-3">
+              <button
+                onClick={handleSubmitReschedule}
+                className="w-full py-3 bg-gradient-to-r from-[#6366F1] to-[#A855F7] hover:from-purple-600 hover:to-purple-700 text-white rounded-lg font-medium shadow-md hover:shadow-lg transition-all duration-200"
+              >
+                Submit Feedback
+              </button>
+              <button
+                onClick={() => setShowRescheduleModal(false)}
+                className="w-full py-3 bg-white hover:bg-gray-50 text-gray-700 rounded-lg font-medium border border-gray-200 transition-all duration-200"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
               {session.showFeedback && (
                 <button className="rounded-md border border-gray-200 px-3 py-1 text-sm text-gray-600 hover:bg-gray-50">
                   Give Feedback
