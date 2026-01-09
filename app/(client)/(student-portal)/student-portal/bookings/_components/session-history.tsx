@@ -2,6 +2,9 @@
 
 import { StarIcon } from "lucide-react";
 import { GrStarOutline } from "react-icons/gr";
+import React, { useState } from "react";
+import { Calendar, Clock, Video, MapPin } from "lucide-react";
+
 
 // import { StarIcon } from '@heroicons/react/24/solid';
 // import { StarIcon as StarOutline } from '@heroicons/react/24/outline';
