@@ -48,6 +48,15 @@ const sessions: Session[] = [
 ];
 
 export default function SessionHistory() {
+     const [selectedSession, setSelectedSession] = useState<string | null>(null);
+      const [showRescheduleModal, setShowRescheduleModal] = useState(false);
+      const [showSuccessModal, setShowSuccessModal] = useState(false);
+      const [rescheduleSessionId, setRescheduleSessionId] = useState<string | null>(null);
+      const [rescheduleData, setRescheduleData] = useState({
+        rating: 0,
+        name: "",
+        comments: ""
+      });
 
      const handleJoinSession = (sessionId: string, meetingLink?: string) => {
     setSelectedSession(sessionId);
