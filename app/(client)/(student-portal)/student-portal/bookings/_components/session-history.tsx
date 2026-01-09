@@ -48,6 +48,49 @@ const sessions: Session[] = [
 ];
 
 export default function SessionHistory() {
+
+     const handleJoinSession = (sessionId: string, meetingLink?: string) => {
+    setSelectedSession(sessionId);
+    if (meetingLink) {
+      alert(`Joining session: ${meetingLink}`);
+    }
+  };
+
+  const handleReschedule = (sessionId: string) => {
+    setRescheduleSessionId(sessionId);
+    setShowRescheduleModal(true);
+    setRescheduleData({ rating: 0, name: "", comments: "" });
+  };
+
+  const handleCancel = (sessionId: string) => {
+    if (confirm("Are you sure you want to cancel this session?")) {
+      alert(`Session ${sessionId} cancelled`);
+    }
+  };
+
+  const handleSubmitReschedule = () => {
+    if (rescheduleData.rating === 0 || !rescheduleData.name || !rescheduleData.comments) {
+      alert("Please fill all fields");
+      return;
+    }
+    
+    // Save to state (localStorage alternative for artifacts)
+    const savedData = {
+      sessionId: rescheduleSessionId,
+      ...rescheduleData,
+      timestamp: new Date().toISOString()
+    };
+    
+    console.log("Reschedule data saved:", savedData);
+    
+    setShowRescheduleModal(false);
+    setShowSuccessModal(true);
+    
+    setTimeout(() => {
+      setShowSuccessModal(false);
+    }, 3000);
+  };
+
   return (
     <div className="max-w-3xl mb-18">
       <h2 className="mb-4 mt-4 text-lg font-semibold text-gray-900">
