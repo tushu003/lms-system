@@ -104,7 +104,7 @@ export default function SessionHistory() {
           >
             {/* Left */}
             <div className="flex items-center gap-4">
-              <div className="h-12 w-12 rounded-md bg-gradient-to-r from-[#6366F1] to-[#A855F7] flex items-center justify-center text-white font-bold">
+              <div className="h-12 w-12 rounded-md flex items-center justify-center text-white font-bold">
                 
               </div>
 
