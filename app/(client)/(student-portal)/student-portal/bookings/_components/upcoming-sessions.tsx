@@ -123,7 +123,7 @@ const UpcomingSessions: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="">
       <div className="max-w-5xl mx-auto relative">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
@@ -306,7 +306,7 @@ const UpcomingSessions: React.FC = () => {
 
       {/* Reschedule Modal */}
        {showRescheduleModal && (
-        <div className="absolute inset-0 flex items-center justify-center z-50 p-4">
+        <div className="absolute inset-0 flex items-center justify-center z-50 p-6">
           <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md p-3 border border-gray-200">
             <h2 className="text-xl font-bold text-gray-800 mb-3">Share Your Feedback</h2>
             
