@@ -124,7 +124,7 @@ const UpcomingSessions: React.FC = () => {
 
   return (
     <div className="min-h-screen">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-5xl mx-auto relative">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <h1 className="text-2xl sm:text-3xl font-bold text-[#1E293B]">
@@ -305,13 +305,13 @@ const UpcomingSessions: React.FC = () => {
       </div>
 
       {/* Reschedule Modal */}
-      {showRescheduleModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-2xl shadow-xl w-full max-w-md p-6">
-            <h2 className="text-xl font-bold text-gray-800 mb-6">Share Your Feedback</h2>
+       {showRescheduleModal && (
+        <div className="absolute inset-0 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md p-6 border border-gray-200">
+            <h2 className="text-xl font-bold text-gray-800 mb-3">Share Your Feedback</h2>
             
             {/* Rating */}
-            <div className="mb-4">
+            <div className="mb-2">
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Rate your session <span className="text-red-500">*</span>
               </label>
@@ -333,7 +333,7 @@ const UpcomingSessions: React.FC = () => {
             </div>
 
             {/* Name */}
-            <div className="mb-4">
+            <div className="mb-2">
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Your Name <span className="text-red-500">*</span>
               </label>
@@ -342,12 +342,12 @@ const UpcomingSessions: React.FC = () => {
                 placeholder="Your Name"
                 value={rescheduleData.name}
                 onChange={(e) => setRescheduleData({...rescheduleData, name: e.target.value})}
-                className="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               />
             </div>
 
             {/* Comments */}
-            <div className="mb-6">
+            <div className="mb-3">
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Comments <span className="text-red-500">*</span>
               </label>
@@ -356,21 +356,21 @@ const UpcomingSessions: React.FC = () => {
                 value={rescheduleData.comments}
                 onChange={(e) => setRescheduleData({...rescheduleData, comments: e.target.value})}
                 rows={4}
-                className="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none"
+                className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none"
               />
             </div>
 
             {/* Buttons */}
-            <div className="space-y-3">
+            <div className="space-y-2">
               <button
                 onClick={handleSubmitReschedule}
-                className="w-full py-3 bg-gradient-to-r from-[#6366F1] to-[#A855F7] hover:from-purple-600 hover:to-purple-700 text-white rounded-lg font-medium shadow-md hover:shadow-lg transition-all duration-200"
+                className="w-full py-2 bg-gradient-to-r from-[#6366F1] to-[#A855F7] hover:from-purple-600 hover:to-purple-700 text-white rounded-lg font-medium shadow-md hover:shadow-lg transition-all duration-200"
               >
                 Submit Feedback
               </button>
               <button
                 onClick={() => setShowRescheduleModal(false)}
-                className="w-full py-3 bg-white hover:bg-gray-50 text-gray-700 rounded-lg font-medium border border-gray-200 transition-all duration-200"
+                className="w-full py-2 bg-white hover:bg-gray-50 text-gray-700 rounded-lg font-medium border border-gray-200 transition-all duration-200"
               >
                 Cancel
               </button>
@@ -381,7 +381,7 @@ const UpcomingSessions: React.FC = () => {
 
       {/* Success Modal */}
       {showSuccessModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+        <div className="fixed inset-0 bg-opacity-50 flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-2xl shadow-xl w-full max-w-sm p-8 text-center">
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
