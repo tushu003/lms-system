@@ -115,7 +115,7 @@ function PdfBadge() {
 
 function AttachmentRow({ attachment }: { attachment: Attachment }) {
   const content = (
-    <div className="flex items-center gap-3  rounded-lg border-1 border-l-indigo-500  bg-[#F6F8FA] px-3 py-2">
+    <div className="flex items-center gap-3  rounded-lg border-2 border-l-indigo-500  bg-[#F6F8FA] px-3 py-2">
       <PdfBadge />
       <span className="truncate text-sm font-medium text-slate-700">{attachment.filename}</span>
     </div>
