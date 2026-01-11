@@ -126,7 +126,7 @@ function AttachmentRow({ attachment }: { attachment: Attachment }) {
       {/* left accent bar */}
       <span
         aria-hidden="true"
-        className="absolute left-0 top-0 h-full w-1 rounded-full bg-indigo-500"
+        className="absolute left-0 top-0 h-full w-1 rounded-full "
       />
       {attachment.href ? (
         <a
@@ -147,7 +147,7 @@ function SessionItem({ session }: { session: Session }) {
     <section className="py-5">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
         <div className="flex items-start gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#F6F8FA] text-slate-600">
+          <div className="flex h-10 w-10 items-center justify-center  rounded-lg bg-[#F6F8FA] text-slate-600">
             <UsersIcon className="h-5 w-5" />
           </div>
 
@@ -164,7 +164,7 @@ function SessionItem({ session }: { session: Session }) {
           {session.downloadHref ? (
             <a
               href={session.downloadHref}
-              className="inline-flex w-full items-center justify-center gap-2 rounded-md border border-slate-200 bg-white px-3 py-2 text-xs font-semibold text-slate-700 shadow-sm transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-md border  bg-white px-3 py-2 text-xs font-semibold text-slate-700 shadow-sm transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto"
             >
               <DownloadIcon className="h-4 w-4" />
               Download Materials
@@ -172,7 +172,7 @@ function SessionItem({ session }: { session: Session }) {
           ) : (
             <button
               type="button"
-              className="inline-flex w-full items-center justify-center gap-2 rounded-md border border-slate-200 bg-white px-3 py-2 text-xs font-semibold text-slate-700 shadow-sm transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-md border border-l-indigo-500 bg-[#F6F8FA] px-3 py-2 text-xs font-semibold text-slate-700 shadow-sm transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto"
             >
               <DownloadIcon className="h-4 w-4" />
               Download Materials
