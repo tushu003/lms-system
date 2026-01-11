@@ -115,9 +115,9 @@ function PdfBadge() {
 
 function AttachmentRow({ attachment }: { attachment: Attachment }) {
   const content = (
-    <div className="flex items-center gap-3  rounded-lg border-2 border-l-indigo-500  bg-[#F6F8FA] px-3 py-2">
+    <div className="flex items-center gap-3  rounded-l border-l border-l-indigo-500  bg-[#F6F8FA] px-3 py-2">
       <PdfBadge />
-      <span className="truncate text-sm font-medium text-slate-700">{attachment.filename}</span>
+      <span className="truncate text-sm font-medium text-[#070707]">{attachment.filename}</span>
     </div>
   );
 
@@ -152,7 +152,7 @@ function SessionItem({ session }: { session: Session }) {
           </div>
 
           <div className="min-w-0">
-            <h3 className="text-sm font-semibold text-slate-900">{session.title}</h3>
+            <h3 className="text-sm font-semibold text-[#1E293B]">{session.title}</h3>
             <p className="text-xs text-slate-600">
               with <span className="font-medium">{session.instructor}</span>
             </p>
