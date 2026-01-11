@@ -192,7 +192,7 @@ function SessionItem({ session }: { session: Session }) {
 
 export default function AllSessionsMaterials() {
   return (
-    <div className="rounded-2xl bg-white shadow-sm ring-1 ring-slate-200">
+    <div className="rounded-2xl bg-white shadow-sm ring-1 ring-slate-200 mb-12">
       <div className="flex items-center justify-between px-6 py-4">
         <h2 className="text-sm font-semibold text-slate-900">All Sessions Materials</h2>
 
