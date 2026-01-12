@@ -2,7 +2,7 @@
 
 import { useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
-import { Profile, useProfile } from "@/context/profile-context";
+import { Profile, useProfile } from "@/app/(client)/(student-portal)/student-portal/profile/-components/context/profile-context";
 
 function BackIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
