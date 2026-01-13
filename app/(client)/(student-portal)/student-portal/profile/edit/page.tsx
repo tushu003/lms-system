@@ -1,5 +1,8 @@
-"use client";   
-import EditProfileCard from "@/app/(client)/(student-portal)/student-portal/profile/-components/EditProfileCard";
+"use client";
+import EditProfileCard from "./-components/EditProfileCard";
+
+   
+// import EditProfileCard from "@/app/(client)/(student-portal)/student-portal/profile/edit/-components/EditProfileCard";
 
 export default function EditProfilePage() {
   return (
