@@ -69,7 +69,7 @@ export default function ProfileViewCard() {
             )}
           </div>
 
-          
+          https://www.linkedin.com/in/tahmina-akter-67172b350/
           <div className="min-w-0">
             <h1 className="truncate text-2xl font-semibold text-slate-900">
               {firstName} <span className="text-slate-700">{lastName}</span>
