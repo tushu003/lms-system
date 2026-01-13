@@ -69,7 +69,7 @@ export default function ProfileViewCard() {
             )}
           </div>
 
-          {/* Name + meta */}
+          
           <div className="min-w-0">
             <h1 className="truncate text-2xl font-semibold text-slate-900">
               {firstName} <span className="text-slate-700">{lastName}</span>
