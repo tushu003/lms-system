@@ -43,6 +43,7 @@ function EditIcon(props: React.SVGProps<SVGSVGElement>) {
 export default function ProfileViewCard() {
   const router = useRouter();
   const { profile } = useProfile();
+  if (!profile) return null;
 
   const [firstName, ...rest] = profile.name.split(" ");
   const lastName = rest.join(" ");
@@ -79,7 +80,9 @@ export default function ProfileViewCard() {
               <p>{profile.country}</p>
               <p>
                 Total Booking:{" "}
-                <span className="font-medium text-slate-700">{profile.totalBooking}</span>
+                <span className="font-medium text-slate-700">
+                  {profile.totalBooking}
+                </span>
               </p>
             </div>
           </div>
