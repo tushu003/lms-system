@@ -8,7 +8,7 @@ import { RiCalendarScheduleFill } from "react-icons/ri";
 const menuItems = [
   {
     label: "Calender & Stats",
-    href: "/tutor-portal/calender",
+    href: "/tutor-portal/calender-stats",
     icon: Calendar,
   },
   {
