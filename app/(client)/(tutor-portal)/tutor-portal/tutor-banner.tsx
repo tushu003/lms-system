@@ -14,12 +14,12 @@ export default function StudentBanner() {
             Welcome Back,
             <br />
             <span className="block bg-gradient-to-r from-[#FACC15] to-[#F472B6] bg-clip-text text-transparent">
-              Sarah!
+              Dr. Miller!
             </span>
           </h2>
 
           <p className="text-white/90 my-4">
-            Here&apos;s your learning overview and upcoming sessions.
+            Here&apos;s your teaching overview and upcoming sessions.
           </p>
         </div>
         <div className="flex items-center gap-4">
