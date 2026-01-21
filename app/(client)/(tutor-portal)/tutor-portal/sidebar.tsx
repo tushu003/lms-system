@@ -3,11 +3,12 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Calendar, FileText, User } from "lucide-react";
+import { RiCalendarScheduleFill } from "react-icons/ri";
 
 const menuItems = [
   {
-    label: "Bookings",
-    href: "/student-portal/bookings",
+    label: "Calender & Stats",
+    href: "/tutor-portal/calender",
     icon: Calendar,
   },
   {
@@ -16,8 +17,13 @@ const menuItems = [
     icon: FileText,
   },
   {
+    label: "Reschedule Request",
+    href: "/tutor-portal/reschedule",
+    icon: RiCalendarScheduleFill,
+  },
+  {
     label: "Profile",
-    href: "/student-portal/profile",
+    href: "/tutor-portal/profile",
     icon: User,
   },
 ];
