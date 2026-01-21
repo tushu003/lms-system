@@ -18,7 +18,7 @@ const menuItems = [
   },
   {
     label: "Reschedule Request",
-    href: "/tutor-portal/reschedule",
+    href: "/tutor-portal/reschedule-request",
     icon: RiCalendarScheduleFill,
   },
   {
